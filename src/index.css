@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Add your custom styles and animations here */
 .swiper-slide {
   transition: opacity 0.5s ease;

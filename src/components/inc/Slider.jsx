@@ -13,10 +13,10 @@ function Slider() {
     // Initialize Swiper when the component mounts
     const swiper = new Swiper(".swiper-container", {
       loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
     });
 
     // Manually trigger the next slide every 2000 milliseconds
@@ -44,8 +44,8 @@ function Slider() {
           <img src={Slider3} className="d-block w-100" alt="..." />
         </div>
       </div>
-      <div className="swiper-button-next"></div>
-      <div className="swiper-button-prev"></div>
+      {/* <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div> */}
     </div>
   );
 }
