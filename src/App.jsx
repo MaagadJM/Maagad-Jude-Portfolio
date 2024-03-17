@@ -5,12 +5,12 @@ import Aboutme from "./components/pages/About";
 import Contactme from "./components/pages/Contact";
 import Projects from "./components/pages/Projects";
 import Navbar from "./components/inc/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/inc/Footer";
 
 function App() {
   return (
-    <Router>
+    // <HashRouter>
       <div>
         <Navbar />
         <Routes>
@@ -21,7 +21,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </Router>
+    // </HashRouter>
   );
 }
 
