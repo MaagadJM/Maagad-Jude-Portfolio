@@ -20,16 +20,16 @@ function Footer() {
             <h6>Quick Links</h6>
             <hr />
             <div>
-              <Link to="./">Home</Link>
+              <Link to="/">Home</Link>
             </div>
             <div>
-              <Link to="./about">About</Link>
+              <Link to="/about">About</Link>
             </div>
             <div>
-              <Link to="./contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </div>
             <div>
-              <Link to="./projects">Projects</Link>
+              <Link to="/projects">Projects</Link>
             </div>
           </div>
 
