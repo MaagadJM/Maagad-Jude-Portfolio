@@ -1,5 +1,5 @@
 import React from "react";
-import VMC from "./inc/Vmc";
+import VMC from "../inc/Vmc";
 
 function Aboutme() {
   return (
