@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css"; // Import Swiper styles
 
-import Slider1 from "../images/DSC_5414.jpg";
+import Slider1 from "../images/Me.jpg";
 import Slider2 from "../images/DSC_5678.jpg";
 import Slider3 from "../images/DSC_5738.jpg";
 

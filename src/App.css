@@ -3,10 +3,10 @@ p {
     color: #262626;
 }
 
-.section {
+/* .section {
     padding-top: 40px;
     padding-bottom: 40px;
-}
+} */
 
 .main-heading {
     color: brown;
@@ -31,4 +31,5 @@ p {
 
 .footer a:hover {
     color: aqua;
+    /* color: black; */
 }
