@@ -11,16 +11,16 @@ import Footer from "./components/inc/Footer";
 function App() {
   return (
     // <HashRouter>
-      <>
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route path="/about" element={<Aboutme />}></Route>
-          <Route path="/contact" element={<Contactme />}></Route>
-          <Route path="/projects" element={<Projects />}></Route>
-        </Routes>
-        <Footer />
-      </>
+    <main>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route path="/about" element={<Aboutme />}></Route>
+        <Route path="/contact" element={<Contactme />}></Route>
+        <Route path="/projects" element={<Projects />}></Route>
+      </Routes>
+      <Footer />
+    </main>
     // </HashRouter>
   );
 }

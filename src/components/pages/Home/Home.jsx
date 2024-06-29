@@ -7,6 +7,11 @@ import "aos/dist/aos.css";
 import Service1 from "../../images/03_Maagad_Jude_Michael_LE2.png";
 import MeCropped from "../../images/MeCropped.jpg";
 
+import { feicons } from "../Carousel/feicons";
+
+import RHouseMount from "/right house mountain.png";
+import BlackedManMount from "/blacked man_on_mountain.png";
+
 function Home({ setActiveLink }) {
   // const [activeLink, setActiveLink] = useState(null);
 
@@ -15,15 +20,29 @@ function Home({ setActiveLink }) {
   // };
 
   useEffect(() => {
-    AOS.init({
-      duration: 1200, // Animation duration in milliseconds
-      // offset: 200, // Offset in pixels from the original trigger point
-      delay: 100, // Delay in milliseconds before the animation starts
-      easing: "ease-in-out", // Easing function for the animation
-      once: false,
-    });
-    AOS.refresh();
+    AOS
+      .init
+      //   {
+      //   duration: 1200, // Animation duration in milliseconds
+      //   // offset: 200, // Offset in pixels from the original trigger point
+      //   delay: 100, // Delay in milliseconds before the animation starts
+      //   easing: "ease-in-out", // Easing function for the animation
+      //   once: false,
+      // }
+      ();
+    // AOS.refresh();
   }, []);
+
+  // ======== Parallax Scrolling ========= //
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  // ======== Parallax Scrolling END ========= //
 
   const handleReadMoreClick = () => {
     // Set the active link to 1 (index of "About Me" in the Navbar)
@@ -38,52 +57,185 @@ function Home({ setActiveLink }) {
 
   return (
     <>
+      {/* ========================= FIRST SECTION ========================== */}
+
       <div
-        className="container h-[92vh] xl:h-[95vh] content-center"
-        // data-aos="fade-up"
+        id="first-sect"
+        className="container-fluid h-[92vh] xl:h-[95vh] w-screen content-center"
+        // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
-        <section className="grid lg:grid-cols-2 relative bottom-6 lg:mx-20 mt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 ">
+        <section
+          id="cover"
+          className="grid lg:grid-cols-2 relative bottom-6 lg:mx-20 mt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 "
+        >
           <section
             data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine"
             className="flex items-center justify-center"
           >
             <img
               src={MeCropped}
               alt=""
               className=" rounded-[50%] xxs:h-48 md:h-80 lg:h-96 image-shadow hover-shadow spin-hover"
+              style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
             />
           </section>
 
-          <section className="xxs:text-center lg:text-start place-content-center h-96">
+          <section
+            className="xxs:text-center lg:text-start place-content-center "
+            style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+          >
             <h3
-              data-aos="fade-up"
-              data-aos-delay="500"
+              data-aos="fade-left"
+              data-aos-delay="1000"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
               className="text-yellow-600"
             >
               Jude Michael Maagad
             </h3>
             <br />
             <section
-              data-aos="fade-down"
-              data-aos-delay="1000"
+              data-aos="fade-left"
+              data-aos-delay="1500"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
               className="text-4xl"
             >
               Front-End Web Developer <br /> & <br /> UI | UX Designer.
             </section>
             <br /> <br />
             <section
-              data-aos="fade-down"
-              data-aos-delay="1500"
-              className="text-lg"
+              data-aos="fade-left"
+              data-aos-delay="2000"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="text-xl"
             >
-              I design and develop high-end web experiences for design-driven
-              companies that value attention to detail.
+              I design and develop high-end web experiences for <br />
+              design-driven companies that value attention to detail.
             </section>
           </section>
         </section>
+
+        {/* <img
+          src={RHouseMount}
+          alt=""
+          className="h-[30vh] absolute right-0 top-[60vh]"
+          style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+        />
+
+        <img
+          src={BlackedManMount}
+          alt=""
+          className="h-[20vh] absolute left-0 top-[90vh]"
+          style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+        /> */}
       </div>
 
-      <section>
+      {/* ========================= FIRST SECTION END ========================== */}
+      <section id="extras-sect" className=" flex space-x-16 overflow-hidden group">
+        <section className=" flex animate-loop-scroll space-x-16 items-center group-hover:paused">
+          {feicons.map((feicon) => (
+            // <div key={feicon.id} className="extras-slide xxs:mx-1 sm:mx-3">
+            <div
+              key={feicon.id}
+              className=""
+              aria-hidden="true"
+            >
+              <img
+                src={feicon.imagePath}
+                alt="products"
+                className="max-w-none mx-14"
+              />
+            </div>
+          ))}
+        </section>
+      </section>
+
+      {/* ========================= SECOND SECTION ========================== */}
+
+      <section
+        id="second-sect"
+        className="section"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 mb-4 text-center">
+              <h3 className="main-heading">My Services</h3>
+              <div className="underline mx-auto"></div>
+            </div>
+
+            <div className="col-md-4 rounded-3xl border border-yellow-500">
+              <img src={Service1} className="w-100 border-bottom" alt="" />
+              <section className="card-body bg-yellow-500 ">
+                <h6>Service 1</h6>
+                <div className="underline"></div>
+                <p>
+                  It was popularised in the 1960s with the release of Letraset
+                  sheets containing Lorem Ipsum passages, and more recently with
+                  desktop publishing software like Aldus PageMaker including
+                  versions of Lorem Ipsum.
+                </p>
+                <Link to="/" className="btn btn-link">
+                  read more
+                </Link>
+              </section>
+            </div>
+
+            <div className="col-md-4">
+              <div className="card shadow">
+                <img src={Service1} className="w-100 border-bottom" alt="" />
+                <div className="card-body">
+                  <h6>Service 1</h6>
+                  <div className="underline"></div>
+                  <p>
+                    It was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker
+                    including versions of Lorem Ipsum.
+                  </p>
+                  <Link to="/" className="btn btn-link">
+                    read more
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="card shadow">
+                <img src={Service1} className="w-100 border-bottom" alt="" />
+                <div className="card-body">
+                  <h6>Service 1</h6>
+                  <div className="underline"></div>
+                  <p>
+                    It was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker
+                    including versions of Lorem Ipsum.
+                  </p>
+                  <Link to="/" className="btn btn-link">
+                    read more
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================= SECOND SECTION END ========================== */}
+
+      {/* ========================= THIRD SECTION ========================== */}
+
+      <section
+        className=""
+        // style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+      >
         <Slider />
 
         {/* <div className="container">
@@ -125,12 +277,18 @@ function Home({ setActiveLink }) {
         </section>
       </section>
 
+      {/* ========================= THIRD SECTION END ========================== */}
+
       {/* My VISION, MISSION and VALUES */}
       <VMC />
 
       {/* My Services */}
 
-      <section className="section border-top" data-aos="fade-up">
+      <section
+        className="section border-top"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-12 mb-4 text-center">

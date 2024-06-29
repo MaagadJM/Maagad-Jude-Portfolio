@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+}
+/* ====================================== */
+
+.navbar-bgc {
+  background: -webkit-linear-gradient(90deg, #18181b, #ca8b04, #18181b);
+}
+
 /* Add your custom styles and animations here */
 .swiper-slide {
   transition: opacity 0.5s ease;
@@ -15,6 +26,16 @@
 
 .swiper-container {
   overflow: hidden;
+}
+
+/* =================== FIRST SECTION ================= */
+
+#first-sect {
+  background: -webkit-linear-gradient(90deg, #18181b, #ca8b04, #18181b);
+  /* background: conic-gradient(from 0deg at 0% 0%, #18181B 25%, #475e8a 90%, #3b4c5c); */
+  /* background: radial-gradient(circle, #ca8b046c, #ca8b04bb, #ca8b0400, #1d1f2005, #1d1f2000 ); */
+  background-color: #ca8b04;
+  background-size: 100vw;
 }
 
 /* =========== IMAGE SHADOW HOVER ============ */
@@ -31,13 +52,115 @@
   box-shadow: 0 0 120px rgba(255, 224, 87, 0.8) !important; /* Yellow shadow color */
 }
 
-.spin-hover {
-  transition: transform 2.5s ease; /* Transition for spinning animation */
+/* .spin-hover {
+  transition: transform 2.5s ease; 
 }
 
 .spin-hover:hover {
-  box-shadow: 0 0 120px rgba(255, 224, 87, 0.8); /* Yellow shadow color on hover */
-  transform: rotate(360deg); /* Rotate 360 degrees on hover */
-}
+  box-shadow: 0 0 120px rgba(255, 224, 87, 0.8); 
+  transform: rotate(360deg); 
+} */
 
 /* =========== IMAGE SHADOW HOVER ============ */
+
+/* =================== FIRST SECTION END ================= */
+
+/* ==================== EXTRAS SECTION =================== */
+
+#extras-sect {
+  /* background: -webkit-linear-gradient(270deg, #ca8b04, #ca8b04); */
+  /* background: conic-gradient(from 0deg at 0% 0%, #18181B 25%, #475e8a 90%, #3b4c5c); */
+  /* background: radial-gradient(circle, #ca8b046c, #ca8b04bb, #ca8b0400, #1d1f2005, #1d1f2000 ); */
+  /* background-size: 100vw; */
+  background-color: #18181b;
+  /* height: 20vh; */
+
+  /* overflow: hidden;
+  padding: 50px 0;
+
+  white-space: nowrap; */
+  position: relative;
+}
+
+/* @keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} */
+
+#extras-sect:before,
+#extras-sect:after {
+  position: absolute;
+  /* top: 0; */
+  width: 150px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+#extras-sect:before {
+  left: 0;
+  background: linear-gradient(to right, #ca8b047c, #ca8b0434, #00000000);
+}
+
+#extras-sect:after {
+  right: 0;
+  background: linear-gradient(to left, #ca8b047c, #ca8b0434, #00000000);
+}
+
+/* #extras-sect:hover .extras-slide {
+  animation-play-state: paused;
+}
+
+.extras-slide {
+  display: inline-block;
+  animation: 10s slide infinite linear;
+  animation-timing-function: linear;
+  width: 100%;
+
+
+} */
+
+/* .extras-slide img {
+  height: 50px;
+  margin: 0 40px;
+} */
+
+/* @media (max-width: 640px) {
+  #extras-sect {
+    height: 100%;
+  }
+
+  #extras-sect:before,
+  #extras-sect:after {
+    width: 20px;
+  }
+
+  .extras-slide {
+    margin-right: 3px;
+  }
+} */
+
+/* ==================== EXTRAS SECTION =================== */
+
+/* =================== SECOND SECTION ================= */
+
+#second-sect {
+  /* background: -webkit-linear-gradient(0deg, #ca8b04, #ca8b04); */
+  /* background: conic-gradient(from 0deg at 0% 0%, #18181B 25%, #475e8a 90%, #3b4c5c); */
+  /* background: radial-gradient(
+    circle,
+    #ca8b04,
+    #18181b,
+    #18181b,
+    #18181b,
+    #18181b
+  ); */
+  background-color: #18181b;
+  background-size: 100vw;
+}
+
+/* =================== SECOND SECTION END ================= */
