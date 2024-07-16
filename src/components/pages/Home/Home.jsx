@@ -136,15 +136,14 @@ function Home({ setActiveLink }) {
       </div>
 
       {/* ========================= FIRST SECTION END ========================== */}
-      <section id="extras-sect" className=" flex space-x-16 overflow-hidden group">
+      <section
+        id="extras-sect"
+        className=" flex space-x-16 overflow-hidden group"
+      >
         <section className=" flex animate-loop-scroll space-x-16 items-center group-hover:paused">
           {feicons.map((feicon) => (
             // <div key={feicon.id} className="extras-slide xxs:mx-1 sm:mx-3">
-            <div
-              key={feicon.id}
-              className=""
-              aria-hidden="true"
-            >
+            <div key={feicon.id} className="" aria-hidden="true">
               <img
                 src={feicon.imagePath}
                 alt="products"
@@ -170,7 +169,8 @@ function Home({ setActiveLink }) {
               <div className="underline mx-auto"></div>
             </div>
 
-            <div className="col-md-4 rounded-3xl border border-yellow-500">
+            <div className="col-md-4 custom-border">
+              {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
               <img src={Service1} className="w-100 border-bottom" alt="" />
               <section className="card-body bg-yellow-500 ">
                 <h6>Service 1</h6>

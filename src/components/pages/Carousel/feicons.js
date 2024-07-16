@@ -25,7 +25,8 @@ export const feicons = [
     },
     {
       id: 7,
-      imagePath: "/Maagad-Jude-Portfolio/CarouselIcons/tailwindcss.svg"
+      imagePath: "/Maagad-Jude-Portfolio/CarouselIcons/tailwindcss.svg",
+      src: "https://www.facebook.com/",
     },
     {
       id: 8,
