@@ -164,10 +164,10 @@
 
   .custom-border {
     position: relative;
-    padding: 20px;
-    border: 2px solid rgb(228, 13, 13);
+    padding-top: 20px;
+    border: 2px solid #635b4b;
     border-radius: 15px;
-    background-color: rgb(219, 9, 9);
+    background-color: #302c2580;
   }
 
   .custom-border:before {
@@ -176,15 +176,23 @@
     top: -2px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
-    height: 20px;
+    width: 50%;
+    height: 3.5%;
     background-color: #18181b;
-    border: 2px solid rgb(248, 6, 6);
+    /* border: 2px solid #ca8b04 !important; */
     border-bottom: none;
     border-top: none;
     /* border-radius: 0 0 10px 10px; */
     clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
     z-index: 1;
+    transition: background-color 1s ease-in-out, width 1s ease-in-out,
+      border 0.5s ease-in-out;
+  }
+
+  .custom-border:hover:before {
+    background-color: #635b4b;
+    border: 2px outset #ca8b04 !important;
+    width: 80%;
   }
 }
 

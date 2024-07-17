@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import VMC from "../inc/Vmc";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Service1 from "../../images/03_Maagad_Jude_Michael_LE2.png";
+import Service1 from "/Thumbnails/HSI thumbnail.png";
 import MeCropped from "../../images/MeCropped.jpg";
 
 import { feicons } from "../Carousel/feicons";
@@ -169,22 +169,32 @@ function Home({ setActiveLink }) {
               <div className="underline mx-auto"></div>
             </div>
 
-            <div className="col-md-4 custom-border">
-              {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
-              <img src={Service1} className="w-100 border-bottom" alt="" />
-              <section className="card-body bg-yellow-500 ">
-                <h6>Service 1</h6>
-                <div className="underline"></div>
-                <p>
-                  It was popularised in the 1960s with the release of Letraset
-                  sheets containing Lorem Ipsum passages, and more recently with
-                  desktop publishing software like Aldus PageMaker including
-                  versions of Lorem Ipsum.
-                </p>
-                <Link to="/" className="btn btn-link">
-                  read more
-                </Link>
-              </section>
+            <div className="col-md-4 custom-border px-1">
+              <a
+                href="https://maagadjm.github.io/Maagad-HSI-Engage/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
+                <img
+                  src={Service1}
+                  className="w-100 border-bottom rounded-t-md cursor-pointer"
+                  alt=""
+                />
+                <section className="card-body bg-yellow-500 mt-[22px]">
+                  <h6>Service 1</h6>
+                  <div className="underline"></div>
+                  <p>
+                    It was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker
+                    including versions of Lorem Ipsum.
+                  </p>
+                  <Link to="/" className="btn btn-link">
+                    read more
+                  </Link>
+                </section>
+              </a>
             </div>
 
             <div className="col-md-4">
