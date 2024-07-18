@@ -1,7 +1,7 @@
-p {
+/* p {
     font-size: 16px;
     color: #262626;
-}
+} */
 
 /* .section {
     padding-top: 40px;
@@ -9,27 +9,29 @@ p {
 } */
 
 .main-heading {
-    color: brown;
-    font-size: 26px;
+  color: brown;
+  font-size: 26px;
 }
 
 .underline {
-    height: 04px;
-    width: 12rem;
-    background-color: rgb(22, 161, 161);
-    margin-top: 10px;
+  height: 04px;
+  width: 12rem;
+  background-color: #ca8b04;
+  margin-top: 10px;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
 }
 
 .bg-c-light {
-    background-color: rgb(227, 227, 227);
+  background-color: rgb(227, 227, 227);
 }
 
 .footer a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .footer a:hover {
-    color: aqua;
-    /* color: black; */
+  color: aqua;
+  /* color: black; */
 }

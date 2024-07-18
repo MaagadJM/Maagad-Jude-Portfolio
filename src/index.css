@@ -183,7 +183,7 @@
     border-bottom: none;
     border-top: none;
     /* border-radius: 0 0 10px 10px; */
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
     z-index: 1;
     transition: background-color 1s ease-in-out, width 1s ease-in-out,
       border 0.5s ease-in-out;

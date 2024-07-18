@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Slider from "../../inc/Slider";
 import { Link } from "react-router-dom";
 import VMC from "../inc/Vmc";
+import Projects from "../MyProjects/Projects";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Service1 from "/Thumbnails/HSI thumbnail.png";
@@ -154,91 +155,9 @@ function Home({ setActiveLink }) {
         </section>
       </section>
 
-      {/* ========================= SECOND SECTION ========================== */}
-
-      <section
-        id="second-sect"
-        className="section"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 mb-4 text-center">
-              <h3 className="main-heading">My Services</h3>
-              <div className="underline mx-auto"></div>
-            </div>
-
-            <div className="col-md-4 custom-border px-1">
-              <a
-                href="https://maagadjm.github.io/Maagad-HSI-Engage/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
-                <img
-                  src={Service1}
-                  className="w-100 border-bottom rounded-t-md cursor-pointer"
-                  alt=""
-                />
-                <section className="card-body bg-yellow-500 mt-[22px]">
-                  <h6>Service 1</h6>
-                  <div className="underline"></div>
-                  <p>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.
-                  </p>
-                  <Link to="/" className="btn btn-link">
-                    read more
-                  </Link>
-                </section>
-              </a>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card shadow">
-                <img src={Service1} className="w-100 border-bottom" alt="" />
-                <div className="card-body">
-                  <h6>Service 1</h6>
-                  <div className="underline"></div>
-                  <p>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.
-                  </p>
-                  <Link to="/" className="btn btn-link">
-                    read more
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card shadow">
-                <img src={Service1} className="w-100 border-bottom" alt="" />
-                <div className="card-body">
-                  <h6>Service 1</h6>
-                  <div className="underline"></div>
-                  <p>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.
-                  </p>
-                  <Link to="/" className="btn btn-link">
-                    read more
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================= SECOND SECTION END ========================== */}
+      {/* ============================= PROJECT SECTION ============================== */}
+      <Projects />
+      {/* ============================= PROJECT SECTION ============================== */}
 
       {/* ========================= THIRD SECTION ========================== */}
 
