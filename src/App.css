@@ -14,10 +14,10 @@
 }
 
 .underline {
-  height: 04px;
+  height: 4px;
   width: 12rem;
   background-color: #ca8b04;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   border-top-right-radius: 100%;
   border-bottom-right-radius: 100%;
 }

@@ -93,7 +93,7 @@ function Home({ setActiveLink }) {
               data-aos-delay="1000"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
-              className="text-yellow-600"
+              className="text-[#FFF5EA]"
             >
               Jude Michael Maagad
             </h3>
