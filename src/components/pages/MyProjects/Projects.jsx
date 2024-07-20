@@ -197,7 +197,8 @@ function Projects() {
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] my-2">
                     If you'd like to have a personal webpage, you can reach me
-                    using my contacts.
+                    using
+                    <Link to="/contact" id="mycontacts">my contacts.</Link>
                   </p>
                   {/* <Link to="/" className="btn btn-link">
                   read more
