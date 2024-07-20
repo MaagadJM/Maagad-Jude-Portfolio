@@ -65,8 +65,7 @@ function Home({ setActiveLink }) {
         className="container-fluid h-[92vh] xl:h-[95vh] w-screen content-center"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
-        <section
-          id="cover"
+        <section 
           className="grid lg:grid-cols-2 relative bottom-6 lg:mx-20 mt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 "
         >
           <section

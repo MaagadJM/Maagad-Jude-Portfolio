@@ -11,7 +11,7 @@ import Footer from "./components/inc/Footer";
 function App() {
   return (
     // <HashRouter>
-    <main>
+    <main className="overflow-x-hidden">
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
