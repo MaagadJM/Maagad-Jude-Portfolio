@@ -27,22 +27,28 @@ function Projects() {
     <>
       {/* ========================= PROJECT SECTION ========================== */}
 
-      <section
-        id="second-sect"
-        className="section"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
+      <section id="second-sect" className="section">
         <div className="py-5">
-          <div className="mx-[15%] mb-5">
-            <h3 className="text-yellow-600">My Projects</h3>
-            <p className="text-[#FFF5EA]">
+          <div
+            className="mx-[15%] mb-5"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
+            <p className="text-[#FFF5EA] text-3xl font-light">My Projects</p>
+            <div className="underline"></div>
+            <p className="text-[#FFF5EA] pt-4">
               I've been highly passionate about these projects, helping agencies
               and startups to take the next step forward.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5 mx-[15%]">
-            <div className=" custom-border px-1">
+          <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 mx-[15%]">
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            >
               <section>
                 <a
                   href="https://maagadjm.github.io/Maagad-HSI-Engage/"
@@ -57,7 +63,9 @@ function Projects() {
                   />
                 </a>
                 <section className="mx-4 mt-[20px]">
-                  <h4 className="text-[#FFF5EA]">HSI Engage</h4>
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    HSI Engage
+                  </p>
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
                     Developed an Engage web page for Highly Succeed Inc. under
@@ -72,7 +80,12 @@ function Projects() {
               </section>
             </div>
 
-            <div className=" custom-border px-1">
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            >
               <section>
                 <a
                   href="https://maagadjm.github.io/Techforce-Solutions-PH/"
@@ -87,7 +100,9 @@ function Projects() {
                   />
                 </a>
                 <section className="mx-4 mt-[20px]">
-                  <h4 className="text-[#FFF5EA]">Techforce Solutions Inc.</h4>
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Techforce Solutions Inc.
+                  </p>
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
                     Redeveloped a web page for Techforce Solutions under Unleash
@@ -102,7 +117,12 @@ function Projects() {
               </section>
             </div>
 
-            <div className=" custom-border px-1">
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
               <section>
                 <a
                   href="https://maagadjm.github.io/Maagad-HAI-APP-DB/"
@@ -117,7 +137,10 @@ function Projects() {
                   />
                 </a>
                 <section className="mx-4 mt-[20px]">
-                  <h4 className="text-[#FFF5EA]">HAI APP Dashboard Stats</h4>
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    HAI APP Dashboard Stats
+                  </p>
+
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
                     Created a new module using recharts for HAI APP dashboard
@@ -132,7 +155,12 @@ function Projects() {
               </section>
             </div>
 
-            <div className=" custom-border px-1">
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
               <section className="h-full content-center">
                 {/* <a
                   href="https://maagadjm.github.io/Maagad-HSI-Engage/"
@@ -164,7 +192,7 @@ function Projects() {
                     />
                   </svg>
 
-                  <section className="flex justify-center text-center items-center gap-x-6">
+                  <section className="flex gap-x-6 my-3">
                     {/* HSI Engage */}
                     <svg
                       className="coming"
@@ -197,8 +225,11 @@ function Projects() {
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] my-2">
                     If you'd like to have a personal webpage, you can reach me
-                    using
-                    <Link to="/contact" id="mycontacts">my contacts.</Link>
+                    here
+                    <br />
+                    <Link to="/contact" id="mycontacts" className="">
+                      my contacts.
+                    </Link>
                   </p>
                   {/* <Link to="/" className="btn btn-link">
                   read more

@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <section className="section footer bg-dark text-white">
+      <section className="section footer bg-[#18181b] text-white py-4">
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
+            {/* <div className="col-md-4">
               <h6>Company Information</h6>
               <hr />
               <p className="text-white">
@@ -16,8 +16,8 @@ function Footer() {
                 unknown printer took a galley of type and scrambled it to make a
                 type specimen book.{" "}
               </p>
-            </div>
-            <div className="col-md-4">
+            </div> */}
+            <div className="col-md-6">
               <h6>Quick Links</h6>
               <hr />
               <div>
@@ -34,7 +34,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-md-4">
+            <div className="col-md-6">
               <h6>Contact Information</h6>
               <hr />
               <div>

@@ -40,15 +40,12 @@
 
 /* =========== IMAGE SHADOW HOVER ============ */
 
-.image-shadow {
-  box-shadow: 0px 0px 30px #000000b3; /* Yellow shadow color */
-}
-
-.hover-shadow {
+.f-image-shadow {
+  box-shadow: 0px 0px 30px #000000b3;
   transition: box-shadow 0.3s ease;
 }
 
-.hover-shadow:hover {
+.f-image-shadow:hover {
   box-shadow: 0 0 120px rgba(255, 224, 87, 0.8) !important; /* Yellow shadow color */
 }
 
@@ -146,7 +143,7 @@
 
 /* ==================== EXTRAS SECTION =================== */
 
-/* =================== SECOND SECTION ================= */
+/* =================== PROJECT SECTION ================= */
 
 #second-sect {
   /* background: -webkit-linear-gradient(0deg, #ca8b04, #ca8b04); */
@@ -202,6 +199,8 @@
 
 #mycontacts {
   position: relative;
+  /* top: 6px;
+  left: 4px; */
   display: inline-block;
   overflow: hidden;
   list-style: none;
@@ -268,4 +267,48 @@
     fill: #ca8b0400;
   }
 }
-/* =================== SECOND SECTION END ================= */
+
+/* @media (max-width: 2034px) {
+  #mycontacts {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 1781px) {
+  #mycontacts {
+    top: 6px;
+    left: 4px;
+  }
+}
+
+@media (max-width: 1291px) {
+  #mycontacts {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 1153px) {
+  #mycontacts {
+    top: 6px;
+    left: 4px;
+  }
+}
+
+@media (max-width: 1028px) {
+  #mycontacts {
+    top: 0px;
+    left: 0px;
+  }
+} */
+/* =================== PROJECT SECTION END ================= */
+
+.a-image-shadow {
+  box-shadow: 0px 0px 30px #000000b3;
+  transition: box-shadow 0.3s ease;
+}
+
+.a-image-shadow:hover {
+  box-shadow: 0 0 12px rgb(231, 164, 38) !important; /* Yellow shadow color */
+}

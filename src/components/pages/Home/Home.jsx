@@ -79,7 +79,7 @@ function Home({ setActiveLink }) {
             <img
               src={MeCropped}
               alt=""
-              className=" rounded-[50%] xxs:h-48 md:h-80 lg:h-96 image-shadow hover-shadow spin-hover"
+              className=" rounded-[50%] xxs:h-48 md:h-80 lg:h-96 f-image-shadow spin-hover"
               style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
             />
           </section>
@@ -88,36 +88,36 @@ function Home({ setActiveLink }) {
             className="xxs:text-center lg:text-start place-content-center "
             style={{ transform: `translateY(${offsetY * 0.3}px)` }}
           >
-            <h3
+            <p
               data-aos="fade-left"
               data-aos-delay="1000"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
-              className="text-[#FFF5EA]"
+              className="text-[#FFF5EA] text-4xl font-light"
             >
               Jude Michael Maagad
-            </h3>
+            </p>
             <br />
-            <section
+            <p
               data-aos="fade-left"
               data-aos-delay="1500"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
-              className="text-4xl"
+              className="text-4xl font-light"
             >
               Front-End Web Developer <br /> & <br /> UI | UX Designer.
-            </section>
+            </p>
             <br /> <br />
-            <section
+            <p
               data-aos="fade-left"
               data-aos-delay="2000"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
-              className="text-xl"
+              className="text-2xl font-light"
             >
               I design and develop high-end web experiences for <br />
               design-driven companies that value attention to detail.
-            </section>
+            </p>
           </section>
         </section>
 
@@ -161,11 +161,11 @@ function Home({ setActiveLink }) {
 
       {/* ========================= THIRD SECTION ========================== */}
 
-      <section
+      {/* <section
         className=""
-        // style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+        style={{ transform: `translateY(${offsetY * 0.5}px)` }}
       >
-        <Slider />
+        <Slider /> */}
 
         {/* <div className="container">
         <div className="card mt-4">
@@ -175,7 +175,7 @@ function Home({ setActiveLink }) {
         </div>
        </div> */}
 
-        <section className="section">
+        {/* <section className="section">
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
@@ -204,16 +204,16 @@ function Home({ setActiveLink }) {
             </div>
           </div>
         </section>
-      </section>
+      </section> */}
 
       {/* ========================= THIRD SECTION END ========================== */}
 
       {/* My VISION, MISSION and VALUES */}
-      <VMC />
+      {/* <VMC /> */}
 
       {/* My Services */}
 
-      <section
+      {/* <section
         className="section border-top"
         data-aos="fade-up"
         data-aos-duration="1000"
@@ -283,7 +283,7 @@ function Home({ setActiveLink }) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

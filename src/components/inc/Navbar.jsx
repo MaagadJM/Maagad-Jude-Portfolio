@@ -114,7 +114,7 @@ export default function Navbar() {
                 </button> */}
 
                   <Menu as="div" className="relative ml-3">
-                    <div>
+                    {/* <div>
                       <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">Open user menu</span>
@@ -124,7 +124,7 @@ export default function Navbar() {
                           className="h-8 w-8 rounded-full"
                         />
                       </Menu.Button>
-                    </div>
+                    </div> */}
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-100"
