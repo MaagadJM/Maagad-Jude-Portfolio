@@ -79,7 +79,7 @@ function Home({ setActiveLink }) {
               src={MeCropped}
               alt=""
               className=" rounded-[50%] xxs:h-48 md:h-80 lg:h-96 f-image-shadow spin-hover"
-              style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+              style={{ transform: `translateY(${offsetY * 0.3}px)` }}
             />
           </section>
 
