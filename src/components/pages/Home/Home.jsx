@@ -62,12 +62,10 @@ function Home({ setActiveLink }) {
 
       <div
         id="first-sect"
-        className="container-fluid h-[92vh] xl:h-[95vh] w-screen content-center"
+        className="container-fluid h-screen w-screen content-center"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
-        <section 
-          className="grid lg:grid-cols-2 relative bottom-6 lg:mx-20 mt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 "
-        >
+        <section className="grid lg:grid-cols-2 relative bottom-16 lg:mx-20 mt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 ">
           <section
             data-aos="fade-up"
             data-aos-delay="500"
@@ -166,7 +164,7 @@ function Home({ setActiveLink }) {
       >
         <Slider /> */}
 
-        {/* <div className="container">
+      {/* <div className="container">
         <div className="card mt-4">
           <div className="card-body">
             <h2>Home Page</h2>
@@ -174,7 +172,7 @@ function Home({ setActiveLink }) {
         </div>
        </div> */}
 
-        {/* <section className="section">
+      {/* <section className="section">
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
