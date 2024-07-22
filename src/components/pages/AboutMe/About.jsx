@@ -8,6 +8,10 @@ import "aos/dist/aos.css";
 import VMC from "../inc/Vmc";
 import STIGradPic from "../../images/STI Gradpic.jpg";
 
+// import SAPBasic from "/PDF/SAP Advance (Implementation & Support) Certificate - Maagad.pdf";
+import SAPBasicTN from "/Thumbnails/SAP Basic Thumbnail.png";
+import SAPAdvanceTN from "/Thumbnails/SAP Advance Thumbnail.png";
+
 function Aboutme() {
   useEffect(() => {
     AOS
@@ -49,7 +53,7 @@ function Aboutme() {
         </div>
       </section> */}
 
-      <section className="pt-16">
+      <section className="pt-28">
         <div className="container">
           <section
             data-aos="fade-up"
@@ -62,7 +66,7 @@ function Aboutme() {
           <section className="grid lg:grid-cols-2 gap-16 my-5 items-center">
             <section
               className="xxs:text-center lg:text-start place-content-center "
-              style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+              // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
             >
               <p
                 data-aos="fade-right"
@@ -87,7 +91,17 @@ function Aboutme() {
               <br />
               <p
                 data-aos="fade-right"
-                data-aos-delay="2500"
+                data-aos-delay="2200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-sine"
+              >
+                User experience, visually striking design, engaging interactions
+                and impeccable typography are my top priorities.
+              </p>
+              <br />
+              <p
+                data-aos="fade-right"
+                data-aos-delay="2200"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-sine"
               >
@@ -98,7 +112,7 @@ function Aboutme() {
 
             <section
               data-aos="fade-left"
-              data-aos-delay="1000"
+              data-aos-delay="2400"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
               className="flex items-center justify-center"
@@ -112,17 +126,111 @@ function Aboutme() {
                   src={STIGradPic}
                   alt=""
                   className="rounded-[5%] xxs:h-48 md:h-80 lg:h-[80%] a-image-shadow spin-hover"
-                  style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+                  // style={{ transform: `translateY(${offsetY * 0.4}px)` }}
                 />
               </a>
             </section>
+
+            {/* ================= MY CERTIFICATES ================ */}
+
+            <section
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+              className="lg:col-span-2 base:mt-10 lg:mt-36 "
+              // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+            >
+              <p className="text-3xl font-light">SAP Certificates</p>
+              <div className="underline"></div>
+            </section>
+
+            <section
+              data-aos="fade-left"
+              data-aos-delay="700"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="flex items-center justify-center"
+            >
+              <a
+                href={SAPBasicTN}
+                target="_blank"
+                rel="noopener noreferrer"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="a-image-shadow rounded-[1%]"
+                style={{ position: "relative", display: "inline-block" }}
+              >
+                <img
+                  src={SAPBasicTN}
+                  alt="Certificate Thumbnail"
+                  className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%]  spin-hover"
+                  style={{
+                    // transform: `translateY(${offsetY * 0.1}px)`,
+                    pointerEvents: "none",
+                    display: "block",
+                  }}
+                  draggable="false"
+                />
+
+                {/* ---------- for external page view ---------- */}
+                {/* <img
+                  src={ThumbnailSAPBasic}
+                  alt="Certificate Thumbnail"
+                  className="rounded-[5%] xxs:h-48 md:h-80 lg:h-[80%] a-image-shadow spin-hover"
+                  style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+                /> */}
+                {/* ---------- for external page view end ---------- */}
+
+                {/* ---------- for internal page view ---------- */}
+                {/* <iframe
+                  src={SAPBasic}
+                  alt=""
+                  className="rounded-[5%] h-[60vh] w-[50vw]  a-image-shadow spin-hover"
+                  style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+                  allowfullscreen
+                /> */}
+                {/* ---------- for internal page view end ---------- */}
+              </a>
+            </section>
+
+            <section
+              data-aos="fade-left"
+              data-aos-delay="1000"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="flex items-center justify-center"
+            >
+              <a
+                href={SAPAdvanceTN}
+                target="_blank"
+                rel="noopener noreferrer"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="a-image-shadow rounded-[1%]"
+                style={{ position: "relative", display: "inline-block" }}
+              >
+                <img
+                  src={SAPAdvanceTN}
+                  alt="Certificate Thumbnail"
+                  className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%] spin-hover"
+                  style={{
+                    // transform: `translateY(${offsetY * 0.3}px)`,
+                    pointerEvents: "none",
+                    display: "block",
+                  }}
+                  draggable="false"
+                />
+              </a>
+            </section>
+
+            {/* ================= MY CERTIFICATES END ================ */}
           </section>
         </div>
       </section>
 
       {/* =========================================== */}
 
-      <div className="py-28" id="second-sect">
+      <div className="py-28 mt-[13rem]" id="second-sect">
         <div className="flex flex-col mx-[15%]">
           <div className=" custom-border px-1">
             <section className="h-full content-center">

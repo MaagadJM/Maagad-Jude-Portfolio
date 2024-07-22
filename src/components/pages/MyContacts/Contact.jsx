@@ -2,13 +2,44 @@ import React from "react";
 
 function Contactme() {
   return (
-    <div className="container">
-      <div className="card mt-4">
-        <div className="card-body">
-          <h2>Contact Me Anytime</h2>
+    <>
+      <section className="bg-[#18181b] text-[#FFF5EA] h-screen">
+        <div className="container h-full grid content-center justify-center items-center gap-y-4">
+          <a
+            href="tel:09217105661"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl font-light text-[#FFF5EA] no-underline"
+          >
+            <p className="text-3xl font-light" id="contacts-hov">my contacts.</p>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=jude11318@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl font-light text-[#FFF5EA] no-underline"
+          >
+            <p className="text-3xl font-light ml-1" id="contacts-hov">jude11318@gmail.com</p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/judemichael-maagad"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline text-[#FFF5EA]"
+          >
+            <p className="text-3xl font-light" id="contacts-hov">Linkedin</p>
+          </a>
+          <a
+            href="https://www.jobstreet.com.ph/profile/judemichael-maagad-MRPPffVWk2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline text-[#FFF5EA]"
+          >
+            <p className="text-3xl font-light" id="contacts-hov">Jobstreet</p>
+          </a>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 
