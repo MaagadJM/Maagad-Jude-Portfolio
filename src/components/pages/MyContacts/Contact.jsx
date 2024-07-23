@@ -11,7 +11,7 @@ function Contactme() {
             rel="noopener noreferrer"
             className="text-2xl font-light text-[#FFF5EA] no-underline"
           >
-            <p className="text-3xl font-light" id="contacts-hov">my contacts.</p>
+            <p className="text-3xl font-light" id="contacts-hov">0921 710 5661</p>
           </a>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=jude11318@gmail.com"

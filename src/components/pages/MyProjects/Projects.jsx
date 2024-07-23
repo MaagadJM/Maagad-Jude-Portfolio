@@ -243,7 +243,7 @@ function Projects() {
                 {/* </a> */}
               </section>
             </div>
-
+            {/* ====================================================================== */}
             <div
               className="lg:col-span-2 mt-24"
               data-aos="fade-up"
@@ -255,8 +255,9 @@ function Projects() {
               </p>
               <div className="underline"></div>
               <p className="text-[#FFF5EA] pt-4">
-                I've been highly passionate about these projects, helping
-                agencies and startups to take the next step forward.
+                My passion for 3D modeling and animation can help your agency or
+                startup elevate its projects. Contact me to collaborate and
+                bring your Blender designs to life!
               </p>
             </div>
 
