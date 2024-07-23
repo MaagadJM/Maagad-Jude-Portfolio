@@ -105,8 +105,8 @@ function Aboutme() {
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-sine"
               >
-                User experience, visually striking design, engaging interactions
-                and impeccable typography are my top priorities.
+                I have experience with SAP and have successfully created 3D
+                models for logo animations using Blender for my clients.
               </p>
             </section>
 

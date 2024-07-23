@@ -5,6 +5,9 @@ import HSIEngage from "/Thumbnails/HSI thumbnail.png";
 import TFSI from "/Thumbnails/Techforce Solutions Inc.png";
 import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 
+// import HSILogoPic from "/Thumbnails/HSI Logo TN.png";
+// import HSILogoVid from "/MP4/HSI Logo.mkv";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -35,7 +38,9 @@ function Projects() {
             data-aos-delay="500"
             data-aos-duration="1000"
           >
-            <p className="text-[#FFF5EA] text-3xl font-light">My Projects</p>
+            <p className="text-[#FFF5EA] text-3xl font-light">
+              Web Development Projects
+            </p>
             <div className="underline"></div>
             <p className="text-[#FFF5EA] pt-4">
               I've been highly passionate about these projects, helping agencies
@@ -79,7 +84,7 @@ function Projects() {
                 {/* </a> */}
               </section>
             </div>
-
+            {/* ----------------------------------------- */}
             <div
               className=" custom-border px-1"
               data-aos="fade-left"
@@ -116,7 +121,7 @@ function Projects() {
                 {/* </a> */}
               </section>
             </div>
-
+            {/* ------------------------------------------- */}
             <div
               className=" custom-border px-1"
               data-aos="fade-right"
@@ -154,7 +159,7 @@ function Projects() {
                 {/* </a> */}
               </section>
             </div>
-
+            {/* ------------------------------------------ */}
             <div
               className=" custom-border px-1"
               data-aos="fade-left"
@@ -236,6 +241,84 @@ function Projects() {
                 </Link> */}
                 </section>
                 {/* </a> */}
+              </section>
+            </div>
+
+            <div
+              className="lg:col-span-2 mt-24"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <p className="text-[#FFF5EA] text-3xl font-light">
+                3D Model Projects
+              </p>
+              <div className="underline"></div>
+              <p className="text-[#FFF5EA] pt-4">
+                I've been highly passionate about these projects, helping
+                agencies and startups to take the next step forward.
+              </p>
+            </div>
+
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                <video
+                  className="w-full h-[70%] rounded-t-md cursor-pointer"
+                  controls
+                  poster="/Maagad-Jude-Portfolio/Thumbnails/HSI Logo TN.png"
+                >
+                  <source
+                    src="/Maagad-Jude-Portfolio/MP4/HSI Logo.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">HSI Logo</p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    I was given a chance to showcase my skills in 3D model
+                    animation by creating Animated Logo for Highly Succed Inc.
+                    under Marketing Department.
+                  </p>
+                </section>
+              </section>
+            </div>
+
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                <video
+                  className="w-full h-[70%] rounded-t-md cursor-pointer"
+                  controls
+                  poster="/Maagad-Jude-Portfolio/Thumbnails/B1G BAY AREA TN.png"
+                >
+                  <source
+                    src="/Maagad-Jude-Portfolio/MP4/B1G BAY AREA.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    B1G BAY AREA LOGO
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    My head of department in marketing recommended me to B1G Bay
+                    Area to create a 3D animated logo for use in their
+                    advertisements and commercials.
+                  </p>
+                </section>
               </section>
             </div>
           </div>
