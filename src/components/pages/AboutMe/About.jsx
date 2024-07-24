@@ -12,6 +12,9 @@ import STIGradPic from "../../images/STI Gradpic.jpg";
 import SAPBasicTN from "/Thumbnails/SAP Basic Thumbnail.png";
 import SAPAdvanceTN from "/Thumbnails/SAP Advance Thumbnail.png";
 
+import HUAWEInetworkfoundation from "/Thumbnails/HUAWEI Network Foundations TN.png";
+import TikTalksCert from "/Thumbnails/TIK TALKS USAID TN.png";
+
 function Aboutme() {
   useEffect(() => {
     AOS
@@ -211,6 +214,77 @@ function Aboutme() {
               >
                 <img
                   src={SAPAdvanceTN}
+                  alt="Certificate Thumbnail"
+                  className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%] spin-hover"
+                  style={{
+                    // transform: `translateY(${offsetY * 0.3}px)`,
+                    pointerEvents: "none",
+                    display: "block",
+                  }}
+                  draggable="false"
+                />
+              </a>
+            </section>
+
+            <section
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+              className="lg:col-span-2 base:mt-10 lg:mt-36 "
+              // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+            >
+              <p className="text-3xl font-light">Other Certificates</p>
+              <div className="underline"></div>
+            </section>
+
+            <section
+              data-aos="fade-left"
+              data-aos-delay="1000"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="flex items-center justify-center"
+            >
+              <a
+                href={HUAWEInetworkfoundation}
+                target="_blank"
+                rel="noopener noreferrer"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="a-image-shadow rounded-[1%]"
+                style={{ position: "relative", display: "inline-block" }}
+              >
+                <img
+                  src={HUAWEInetworkfoundation}
+                  alt="Certificate Thumbnail"
+                  className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%] spin-hover"
+                  style={{
+                    // transform: `translateY(${offsetY * 0.3}px)`,
+                    pointerEvents: "none",
+                    display: "block",
+                  }}
+                  draggable="false"
+                />
+              </a>
+            </section>
+
+            <section
+              data-aos="fade-left"
+              data-aos-delay="1000"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="flex items-center justify-center"
+            >
+              <a
+                href={TikTalksCert}
+                target="_blank"
+                rel="noopener noreferrer"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="a-image-shadow rounded-[1%]"
+                style={{ position: "relative", display: "inline-block" }}
+              >
+                <img
+                  src={TikTalksCert}
                   alt="Certificate Thumbnail"
                   className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%] spin-hover"
                   style={{
