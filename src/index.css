@@ -349,3 +349,63 @@
 }
 
 /* ================ CONTACT SECTION END ============== */
+
+/* ============== navigation ============= */
+
+/* #back-to-top-btn {
+  transform: rotate(225deg);
+  box-shadow: 10px 10px 30px #bd1010b3;
+  transition: box-shadow 0.3s ease;
+  background-color: #18181b;
+} */
+
+#back-to-top-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #18181b;
+  box-shadow: 10px 10px 30px #bd1010b3;
+  transform: rotate(225deg);
+  opacity: 0;
+  visibility: hidden; /* Start hidden */
+  transition: opacity 0.5s ease, visibility 0.5s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+#back-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top-btn:hover {
+  box-shadow: 0 0 12px rgb(231, 164, 38) !important; /* Yellow shadow color */
+}
+
+#back-to-top path {
+  animation: fillAnimation 3s linear infinite;
+  z-index: 99 !important;
+}
+
+@keyframes fillAnimation {
+  0% {
+    /* fill: #ca8b04; */
+    fill: #ff0000;
+  }
+  25% {
+    fill: #ffe347;
+  }
+  50% {
+    fill: #ca8b04;
+    /* fill: #d17070; */
+  }
+  75% {
+    fill: #b3afaf;
+  }
+  100% {
+    fill: #ac9054;
+  }
+}
+
+/* ======================== */

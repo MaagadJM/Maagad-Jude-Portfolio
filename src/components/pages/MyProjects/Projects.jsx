@@ -8,6 +8,8 @@ import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 // import HSILogoPic from "/Thumbnails/HSI Logo TN.png";
 // import HSILogoVid from "/MP4/HSI Logo.mkv";
 
+import BackToTopButton from "../../inc/BackToTop";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -327,6 +329,8 @@ function Projects() {
       </section>
 
       {/* ========================= SECOND SECTION END ========================== */}
+
+      <BackToTopButton />
     </>
   );
 }

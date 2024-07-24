@@ -13,6 +13,8 @@ import { feicons } from "../Carousel/feicons";
 import RHouseMount from "/right house mountain.png";
 import BlackedManMount from "/blacked man_on_mountain.png";
 
+import BackToTop from "../../inc/BackToTop";
+
 function Home({ setActiveLink }) {
   // const [activeLink, setActiveLink] = useState(null);
 
@@ -281,6 +283,8 @@ function Home({ setActiveLink }) {
           </div>
         </div>
       </section> */}
+
+      <BackToTop />
     </>
   );
 }
