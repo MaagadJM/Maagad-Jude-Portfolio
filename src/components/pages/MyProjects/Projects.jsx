@@ -335,6 +335,7 @@ function Projects() {
                 </section>
               </section>
             </div>
+
             {/* ======================= 3D MODELS ======================== */}
             {/* <div
               className=" custom-border px-1"
@@ -373,7 +374,7 @@ function Projects() {
                 {!isImageVisible ? (
                   // Display the thumbnail image
                   <img
-                    className="w-full mt-[12px] rounded-t-md cursor-pointer"
+                    className="w-full rounded-t-md cursor-pointer"
                     src={InteriorDesignTN} // Thumbnail image
                     alt="Interior Design Thumbnail"
                     onContextMenu={(e) => e.preventDefault()}
@@ -400,6 +401,37 @@ function Projects() {
                     I created a mini interior design project focused on
                     optimizing space in small houses, incorporating innovative
                     design elements to enhance functionality and aesthetics.
+                  </p>
+                </section>
+              </section>
+            </div>
+
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                <video
+                  className="w-full h-[70%] rounded-t-md cursor-pointer"
+                  controls
+                  poster="/Maagad-Jude-Portfolio/Thumbnails/Slingshot Board TN.png"
+                >
+                  <source
+                    src="/Maagad-Jude-Portfolio/MP4/Slingshot Board.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">Pinball</p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    I modeled a pinball board, incorporating rigid body physics
+                    to simulate the movement of the ball and mechanisms,
+                    allowing for dynamic interactions where the paddles can push
+                    the ball upward with varying force and precision.
                   </p>
                 </section>
               </section>
