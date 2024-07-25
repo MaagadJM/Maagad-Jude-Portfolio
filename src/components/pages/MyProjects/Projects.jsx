@@ -258,7 +258,7 @@ function Projects() {
             </div>
             {/* =============================== 3D MODEL - ANIMATION PROJECTS ======================================= */}
             <div
-              className="lg:col-span-2 mt-24"
+              className="md:col-span-2 mt-24"
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-duration="1000"
@@ -373,7 +373,7 @@ function Projects() {
                 {!isImageVisible ? (
                   // Display the thumbnail image
                   <img
-                    className="w-full h-96 rounded-t-md cursor-pointer"
+                    className="w-full mt-[12px] rounded-t-md cursor-pointer"
                     src={InteriorDesignTN} // Thumbnail image
                     alt="Interior Design Thumbnail"
                     onClick={handleThumbnailClick}
@@ -381,7 +381,7 @@ function Projects() {
                 ) : (
                   // Display the secondary image after clicking the thumbnail
                   <img
-                    className="w-full h-96 rounded-t-md cursor-pointer"
+                    className="w-full rounded-t-md cursor-pointer"
                     src={InteriorDesign} // Secondary image
                     alt="Interior Design"
                     onClick={handleThumbnailClick}
