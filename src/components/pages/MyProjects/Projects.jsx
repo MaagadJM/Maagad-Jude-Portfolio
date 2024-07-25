@@ -5,6 +5,8 @@ import HSIEngage from "/Thumbnails/HSI thumbnail.png";
 import TFSI from "/Thumbnails/Techforce Solutions Inc.png";
 import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 
+import InteriorDesign from "../../images/Interior Design.png";
+
 // import HSILogoPic from "/Thumbnails/HSI Logo TN.png";
 // import HSILogoVid from "/MP4/HSI Logo.mkv";
 
@@ -245,7 +247,7 @@ function Projects() {
                 {/* </a> */}
               </section>
             </div>
-            {/* ====================================================================== */}
+            {/* =============================== 3D MODEL - ANIMATION PROJECTS ======================================= */}
             <div
               className="lg:col-span-2 mt-24"
               data-aos="fade-up"
@@ -320,6 +322,36 @@ function Projects() {
                     My head of department in marketing recommended me to B1G Bay
                     Area to create a 3D animated logo for use in their
                     advertisements and commercials.
+                  </p>
+                </section>
+              </section>
+            </div>
+            {/* ======================= 3D MODELS ======================== */}
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                <video
+                  className="w-full h-[70%] rounded-t-md cursor-default"
+                  // controls
+                  poster={InteriorDesign}
+                >
+                  <source
+                    src={InteriorDesign}
+                    //  type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Mini Interior Design
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    Created a mini interior design for small houses.
                   </p>
                 </section>
               </section>
