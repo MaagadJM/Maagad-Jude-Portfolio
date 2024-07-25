@@ -5,6 +5,7 @@ import HSIEngage from "/Thumbnails/HSI thumbnail.png";
 import TFSI from "/Thumbnails/Techforce Solutions Inc.png";
 import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 
+import InteriorDesignTN from "/Thumbnails/Interior Design TN.png";
 import InteriorDesign from "../../images/Interior Design.png";
 
 // import HSILogoPic from "/Thumbnails/HSI Logo TN.png";
@@ -29,6 +30,14 @@ function Projects() {
       ();
     // AOS.refresh();
   }, []);
+
+  // State to track if the thumbnail has been clicked
+  const [isImageVisible, setImageVisible] = useState(false);
+
+  // Handler to toggle image visibility
+  const handleThumbnailClick = () => {
+    setImageVisible((prevState) => !prevState);
+  };
 
   return (
     <>
@@ -327,7 +336,7 @@ function Projects() {
               </section>
             </div>
             {/* ======================= 3D MODELS ======================== */}
-            <div
+            {/* <div
               className=" custom-border px-1"
               data-aos="fade-right"
               data-aos-duration="1000"
@@ -335,14 +344,11 @@ function Projects() {
             >
               <section>
                 <video
-                  className="w-full h-[70%] rounded-t-md cursor-default"
-                  // controls
-                  poster={InteriorDesign}
+                  className="w-full h-[70%] rounded-t-md cursor-pointer"
+                  controls
+                  poster={InteriorDesignTN}
                 >
-                  <source
-                    src={InteriorDesign}
-                    //  type="video/mp4"
-                  />
+                  <source src={InteriorDesign} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <section className="mx-4 mt-[20px]">
@@ -352,6 +358,44 @@ function Projects() {
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
                     Created a mini interior design for small houses.
+                  </p>
+                </section>
+              </section>
+            </div> */}
+
+            <div
+              className="custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                {!isImageVisible ? (
+                  // Display the thumbnail image
+                  <img
+                    className="w-full h-96 rounded-t-md cursor-pointer"
+                    src={InteriorDesignTN} // Thumbnail image
+                    alt="Interior Design Thumbnail"
+                    onClick={handleThumbnailClick}
+                  />
+                ) : (
+                  // Display the secondary image after clicking the thumbnail
+                  <img
+                    className="w-full h-96 rounded-t-md cursor-pointer"
+                    src={InteriorDesign} // Secondary image
+                    alt="Interior Design"
+                    onClick={handleThumbnailClick}
+                  />
+                )}
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Mini Interior Design
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    I created a mini interior design project focused on
+                    optimizing space in small houses, incorporating innovative
+                    design elements to enhance functionality and aesthetics.
                   </p>
                 </section>
               </section>
