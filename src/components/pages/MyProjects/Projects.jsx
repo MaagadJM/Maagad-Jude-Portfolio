@@ -376,6 +376,8 @@ function Projects() {
                     className="w-full mt-[12px] rounded-t-md cursor-pointer"
                     src={InteriorDesignTN} // Thumbnail image
                     alt="Interior Design Thumbnail"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
                     onClick={handleThumbnailClick}
                   />
                 ) : (
@@ -384,6 +386,8 @@ function Projects() {
                     className="w-full rounded-t-md cursor-pointer"
                     src={InteriorDesign} // Secondary image
                     alt="Interior Design"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
                     onClick={handleThumbnailClick}
                   />
                 )}
