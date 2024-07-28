@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import JMMLogo from "../images/JMM_logo.png";
+import JMMLogo from "/JMM Logo Custom Icon.png";
 import UserprofileDP from "../images/Maagad2x2.jpg";
 
 const navigation = [
@@ -42,7 +42,7 @@ export default function Navbar() {
     <main className="navbar-bgc">
       <Disclosure
         as="nav"
-        className="bg-zinc-900"
+        className="bg-zinc-900 pt-3"
         data-aos="fade-down"
         data-aos-delay="500"
         data-aos-duration="1500"
@@ -77,7 +77,7 @@ export default function Navbar() {
                   <div className="flex-shrink-0 items-center">
                     <Link to="/" className="flex-shrink-0 flex items-center">
                       <img
-                        className="h-10 w-auto rounded-xl"
+                        className="h-8 w-auto"
                         src={JMMLogo}
                         alt="Jude Michael Maagad Company"
                       />

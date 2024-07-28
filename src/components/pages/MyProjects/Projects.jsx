@@ -8,6 +8,12 @@ import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 import InteriorDesignTN from "/Thumbnails/Interior Design TN.png";
 import InteriorDesign from "../../images/Interior Design.png";
 
+import JMMLogoTN from "/Thumbnails/JMM Logo TN.png";
+import JMMLogoPic from "/JMM Logo Custom.png";
+
+import INVLogoTN from "/Thumbnails/INV Logo TN.png";
+import INVLogoPic from "/INV Logo.png";
+
 // import HSILogoPic from "/Thumbnails/HSI Logo TN.png";
 // import HSILogoVid from "/MP4/HSI Logo.mkv";
 
@@ -32,11 +38,21 @@ function Projects() {
   }, []);
 
   // State to track if the thumbnail has been clicked
-  const [isImageVisible, setImageVisible] = useState(false);
+  const [isInteriorDesignVisible, setInteriorDesignVisible] = useState(false);
+  const [isJMMLogoVisible, setJMMLogoVisible] = useState(false);
+  const [isINVVisible, setINVVisible] = useState(false);
 
   // Handler to toggle image visibility
-  const handleThumbnailClick = () => {
-    setImageVisible((prevState) => !prevState);
+  const handleInteriorDesignClick = () => {
+    setInteriorDesignVisible((prevState) => !prevState);
+  };
+
+  const handleJMMLogoClick = () => {
+    setJMMLogoVisible((prevState) => !prevState);
+  };
+
+  const handleINVClick = () => {
+    setINVVisible((prevState) => !prevState);
   };
 
   return (
@@ -371,7 +387,7 @@ function Projects() {
               data-aos-delay="1500"
             >
               <section>
-                {!isImageVisible ? (
+                {!isInteriorDesignVisible ? (
                   // Display the thumbnail image
                   <img
                     className="w-full rounded-t-md cursor-pointer"
@@ -379,7 +395,7 @@ function Projects() {
                     alt="Interior Design Thumbnail"
                     onContextMenu={(e) => e.preventDefault()}
                     draggable="false"
-                    onClick={handleThumbnailClick}
+                    onClick={handleInteriorDesignClick}
                   />
                 ) : (
                   // Display the secondary image after clicking the thumbnail
@@ -389,7 +405,7 @@ function Projects() {
                     alt="Interior Design"
                     onContextMenu={(e) => e.preventDefault()}
                     draggable="false"
-                    onClick={handleThumbnailClick}
+                    onClick={handleInteriorDesignClick}
                   />
                 )}
                 <section className="mx-4 mt-[20px]">
@@ -432,6 +448,107 @@ function Projects() {
                     to simulate the movement of the ball and mechanisms,
                     allowing for dynamic interactions where the paddles can push
                     the ball upward with varying force and precision.
+                  </p>
+                </section>
+              </section>
+            </div>
+
+            {/* =========================== GFX - UI / UX SECTION ========================= */}
+
+            <div
+              className="md:col-span-2 mt-24"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <p className="text-[#FFF5EA] text-3xl font-light">GFX | UI/UX</p>
+              <div className="underline"></div>
+              <p className="text-[#FFF5EA] pt-4">
+                My passion for 3D modeling and animation can help your agency or
+                startup elevate its projects. Contact me to collaborate and
+                bring your Blender designs to life!
+              </p>
+            </div>
+
+            <div
+              className="custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                {!isJMMLogoVisible ? (
+                  // Display the thumbnail image
+                  <img
+                    className="w-full rounded-t-md cursor-pointer"
+                    src={JMMLogoTN} // Thumbnail image
+                    alt="Interior Design Thumbnail"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
+                    onClick={handleJMMLogoClick}
+                  />
+                ) : (
+                  // Display the secondary image after clicking the thumbnail
+                  <img
+                    className="w-full rounded-t-md cursor-pointer"
+                    src={JMMLogoPic} // Secondary image
+                    alt="Interior Design"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
+                    onClick={handleJMMLogoClick}
+                  />
+                )}
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Mini Interior Design
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    I created a mini interior design project focused on
+                    optimizing space in small houses, incorporating innovative
+                    design elements to enhance functionality and aesthetics.
+                  </p>
+                </section>
+              </section>
+            </div>
+            {/* =========================================================================================== */}
+            <div
+              className="custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                {!isINVVisible ? (
+                  // Display the thumbnail image
+                  <img
+                    className="w-full rounded-t-md cursor-pointer"
+                    src={INVLogoTN} // Thumbnail image
+                    alt="Interior Design Thumbnail"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
+                    onClick={handleINVClick}
+                  />
+                ) : (
+                  // Display the secondary image after clicking the thumbnail
+                  <img
+                    className="w-full rounded-t-md cursor-pointer"
+                    src={INVLogoPic} // Secondary image
+                    alt="Interior Design"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
+                    onClick={handleINVClick}
+                  />
+                )}
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Mini Interior Design
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    I created a mini interior design project focused on
+                    optimizing space in small houses, incorporating innovative
+                    design elements to enhance functionality and aesthetics.
                   </p>
                 </section>
               </section>
