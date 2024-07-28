@@ -464,9 +464,8 @@ function Projects() {
               <p className="text-[#FFF5EA] text-3xl font-light">GFX | UI/UX</p>
               <div className="underline"></div>
               <p className="text-[#FFF5EA] pt-4">
-                My passion for 3D modeling and animation can help your agency or
-                startup elevate its projects. Contact me to collaborate and
-                bring your Blender designs to life!
+                I absolutely love turning ideas into visually stunning
+                realities. Let's create something extraordinary together.
               </p>
             </div>
 
@@ -500,13 +499,14 @@ function Projects() {
                 )}
                 <section className="mx-4 mt-[20px]">
                   <p className="text-[#FFF5EA] text-3xl font-light">
-                    Mini Interior Design
+                    Jude Michael Maagad
                   </p>
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
-                    I created a mini interior design project focused on
-                    optimizing space in small houses, incorporating innovative
-                    design elements to enhance functionality and aesthetics.
+                    This is my personal logo. My inspiration for creating it
+                    came from my favorite movie, Iron Man. As you can see, the
+                    design incorporates metallic textures and the letter "J"
+                    resembles glass in jarvis screen.
                   </p>
                 </section>
               </section>
@@ -542,13 +542,14 @@ function Projects() {
                 )}
                 <section className="mx-4 mt-[20px]">
                   <p className="text-[#FFF5EA] text-3xl font-light">
-                    Mini Interior Design
+                    Innovators Logo
                   </p>
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
-                    I created a mini interior design project focused on
-                    optimizing space in small houses, incorporating innovative
-                    design elements to enhance functionality and aesthetics.
+                    This logo represents a team of dedicated developers united
+                    by trust and shared knowledge. We support each other, push
+                    boundaries, and strive for excellence in crafting innovative
+                    solutions.
                   </p>
                 </section>
               </section>
