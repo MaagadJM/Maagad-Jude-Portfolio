@@ -14,6 +14,12 @@ import JMMLogoPic from "/JMM Logo Custom.png";
 import INVLogoTN from "/Thumbnails/INV Logo TN.png";
 import INVLogoPic from "/INV Logo.png";
 
+import GreenNeonTN from "/Thumbnails/Green Neon Canva TN.png";
+import GreenNeonPic from "../../images/Green Neon Canva.png";
+
+import PurpleNeonTN from "/Thumbnails/Purple Neon Canva TN.png";
+import PurpleNeonPic from "../../images/Purple Neon Canva.png";
+
 // import HSILogoPic from "/Thumbnails/HSI Logo TN.png";
 // import HSILogoVid from "/MP4/HSI Logo.mkv";
 
@@ -41,6 +47,8 @@ function Projects() {
   const [isInteriorDesignVisible, setInteriorDesignVisible] = useState(false);
   const [isJMMLogoVisible, setJMMLogoVisible] = useState(false);
   const [isINVVisible, setINVVisible] = useState(false);
+  const [isGreenNeonVisible, setGreenNeonVisible] = useState(false);
+  const [isPurpleNeonVisible, setPurpleNeonVisible] = useState(false);
 
   // Handler to toggle image visibility
   const handleInteriorDesignClick = () => {
@@ -53,6 +61,14 @@ function Projects() {
 
   const handleINVClick = () => {
     setINVVisible((prevState) => !prevState);
+  };
+
+  const handleGreenNeonClick = () => {
+    setGreenNeonVisible((prevState) => !prevState);
+  };
+
+  const handlePurpleNeonClick = () => {
+    setPurpleNeonVisible((prevState) => !prevState);
   };
 
   return (
@@ -550,6 +566,112 @@ function Projects() {
                     by trust and shared knowledge. We support each other, push
                     boundaries, and strive for excellence in crafting innovative
                     solutions.
+                  </p>
+                </section>
+              </section>
+            </div>
+
+            {/* ======================== Canva Designs ========================= */}
+
+            <div
+              className="md:col-span-2 mt-24"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <p className="text-[#FFF5EA] text-3xl font-light">
+                Hackathon GFX Designer
+              </p>
+              <div className="underline"></div>
+              <p className="text-[#FFF5EA] pt-4">
+                I was recommended by other departments and given the chance to
+                demonstrate my graphic design abilities by designing a poster
+                for the hackathon event organized by the senior developers at
+                HSI.
+              </p>
+            </div>
+
+            <div
+              className="custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                {!isGreenNeonVisible ? (
+                  // Display the thumbnail image
+                  <img
+                    className="w-full rounded-t-md cursor-pointer"
+                    src={GreenNeonTN} // Thumbnail image
+                    alt="Interior Design Thumbnail"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
+                    onClick={handleGreenNeonClick}
+                  />
+                ) : (
+                  // Display the secondary image after clicking the thumbnail
+                  <img
+                    className="w-full rounded-t-md cursor-pointer"
+                    src={GreenNeonPic} // Secondary image
+                    alt="Interior Design"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
+                    onClick={handleGreenNeonClick}
+                  />
+                )}
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Neon Green
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    {/* This is my personal logo. My inspiration for creating it
+                    came from my favorite movie, Iron Man. As you can see, the
+                    design incorporates metallic textures and the letter "J"
+                    resembles glass in jarvis screen. */}
+                  </p>
+                </section>
+              </section>
+            </div>
+            {/* =========================================================================================== */}
+            <div
+              className="custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                {!isPurpleNeonVisible ? (
+                  // Display the thumbnail image
+                  <img
+                    className="w-full rounded-t-md cursor-pointer"
+                    src={PurpleNeonTN} // Thumbnail image
+                    alt="Interior Design Thumbnail"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
+                    onClick={handlePurpleNeonClick}
+                  />
+                ) : (
+                  // Display the secondary image after clicking the thumbnail
+                  <img
+                    className="w-full rounded-t-md cursor-pointer"
+                    src={PurpleNeonPic} // Secondary image
+                    alt="Interior Design"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable="false"
+                    onClick={handlePurpleNeonClick}
+                  />
+                )}
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Neon Purple
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    {/* This logo represents a team of dedicated developers united
+                    by trust and shared knowledge. We support each other, push
+                    boundaries, and strive for excellence in crafting innovative
+                    solutions. */}
                   </p>
                 </section>
               </section>
