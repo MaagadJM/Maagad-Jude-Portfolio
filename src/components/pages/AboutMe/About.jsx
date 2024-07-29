@@ -111,7 +111,8 @@ function Aboutme() {
                 data-aos-easing="ease-in-sine"
               >
                 I have experience with SAP and have successfully created 3D
-                models for logo animations using Blender for my clients.
+                models for logo animations using Blender, as well as using Figma
+                for UI/UX design for my clients.
               </p>
             </section>
 
@@ -130,7 +131,7 @@ function Aboutme() {
                 <img
                   src={STIGradPic}
                   alt=""
-                  className="rounded-[5%] xxs:h-48 md:h-80 lg:h-[80%] a-image-shadow spin-hover"
+                  className="rounded-[5%] xxs:h-full md:h-80 lg:h-[80%] a-image-shadow spin-hover"
                   // style={{ transform: `translateY(${offsetY * 0.4}px)` }}
                 />
               </a>
