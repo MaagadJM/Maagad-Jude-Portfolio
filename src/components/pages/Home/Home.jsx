@@ -64,7 +64,7 @@ function Home({ setActiveLink }) {
 
       <div
         id="first-sect"
-        className="xxs:h-[140vh] sm:h-[92vh] xl:h-[95vh] w-screen sm:content-center"
+        className="xxs:h-[180vh] sm:h-[92vh] xl:h-[95vh] w-screen sm:content-center"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
         <section className="container grid lg:grid-cols-2 relative lg:mx-20 pt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 ">
