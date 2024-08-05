@@ -35,7 +35,7 @@ function Footer() {
                 </div>
               </div>
 
-              <div className="col-md-6 font-light text-xl">
+              <div className="col-md-6 font-light text-xl max-md:pt-10">
                 <p>Contact Information</p>
                 <hr className="text-[#ca8b04]" />
                 <div>
