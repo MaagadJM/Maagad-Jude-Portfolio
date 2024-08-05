@@ -12,7 +12,7 @@ import UserprofileDP from "../images/Maagad2x2.jpg";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "About Me", href: "/about", current: false },
+  { name: "About", href: "/about", current: false },
   { name: "My Contact", href: "/contact", current: false },
   { name: "Projects", href: "/projects", current: false },
 ];
@@ -53,7 +53,7 @@ export default function Navbar() {
               data-aos="fade-down"
               data-aos-delay="800"
               data-aos-duration="1500"
-              className="xl:mx-auto sm:mx-10 max-w-7xl px-2 sm:px-6 lg:px-8"
+              className="2xl:mx-auto sm:mx-10 max-w-screen-2xl px-2 sm:px-6 lg:px-8"
             >
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

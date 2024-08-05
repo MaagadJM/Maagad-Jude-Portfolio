@@ -58,17 +58,17 @@ function Aboutme() {
         </div>
       </section> */}
 
-      <section className="pt-28">
+      <section className="pt-24">
         <div className="container">
           <section
             data-aos="fade-up"
             data-aos-delay="500"
             data-aos-duration="1000"
           >
-            <p className="text-3xl font-light">About</p>
+            <p className="text-3xl font-light">About Me</p>
             <div className="underline"></div>
           </section>
-          <section className="grid lg:grid-cols-2 gap-16 my-5 items-center">
+          <section className="grid lg:grid-cols-2 gap-16 my-20 items-center">
             <section
               className="xxs:text-center lg:text-start place-content-center "
               // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
@@ -90,8 +90,8 @@ function Aboutme() {
                 data-aos-easing="ease-in-sine"
               >
                 A creative developer with a passion for design and development.
-                From concept to launch, I am involved in every step of the
-                process.
+                From concept to launch, I contribute to the entire front-end
+                development process, from design to implementation.
               </p>
               <br />
               <p
@@ -101,7 +101,10 @@ function Aboutme() {
                 data-aos-easing="ease-in-sine"
               >
                 User experience, visually striking design, engaging interactions
-                and impeccable typography are my top priorities.
+                and impeccable typography are my top priorities. Additionally, I
+                have successfully utilized Blender to create 3D models for logo
+                animations, and have employed Figma for UI/UX design in client
+                projects.
               </p>
               <br />
               <p
@@ -110,9 +113,8 @@ function Aboutme() {
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-sine"
               >
-                I have experience with SAP and have successfully created 3D
-                models for logo animations using Blender, as well as using Figma
-                for UI/UX design for my clients.
+                I possess experience in SAP systems, having obtained both basic
+                and advanced certifications.
               </p>
             </section>
 

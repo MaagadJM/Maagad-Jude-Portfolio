@@ -587,7 +587,8 @@ function Projects() {
                 I was recommended by other departments and given the chance to
                 demonstrate my graphic design abilities by designing a poster
                 for the hackathon event organized by the senior developers at
-                HSI.
+                HSI. I've carefully selected these two designs from my portfolio
+                to showcase my design capabilities.
               </p>
             </div>
 
@@ -625,10 +626,11 @@ function Projects() {
                   </p>
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
-                    {/* This is my personal logo. My inspiration for creating it
-                    came from my favorite movie, Iron Man. As you can see, the
-                    design incorporates metallic textures and the letter "J"
-                    resembles glass in jarvis screen. */}
+                    This design, "Neon Green," features a dark background with
+                    contrasting neon green accents. It has a modern and
+                    energetic feel, with a focus on clear typography and a
+                    minimalist layout. The use of geometric shapes adds a
+                    contemporary touch.
                   </p>
                 </section>
               </section>
@@ -668,10 +670,12 @@ function Projects() {
                   </p>
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
-                    {/* This logo represents a team of dedicated developers united
-                    by trust and shared knowledge. We support each other, push
-                    boundaries, and strive for excellence in crafting innovative
-                    solutions. */}
+                    The second design, "Neon Purple," also employs a dark
+                    background but with a more vibrant purple color palette. It
+                    has a slightly more playful and dynamic aesthetic compared
+                    to the first design. The layout is similar, but the use of
+                    different shapes and elements creates a distinct visual
+                    impression.
                   </p>
                 </section>
               </section>
