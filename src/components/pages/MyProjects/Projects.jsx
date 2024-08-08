@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import HSIEngage from "/Thumbnails/HSI thumbnail.png";
 import TFSI from "/Thumbnails/Techforce Solutions Inc.png";
 import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
+import GatsbyOne from "/Thumbnails/Gatsby One TN.png";
 
 import InteriorDesignTN from "/Thumbnails/Interior Design TN.png";
 import InteriorDesign from "../../images/Interior Design.png";
@@ -158,6 +159,44 @@ function Projects() {
                     Redeveloped a web page for Techforce Solutions under Unleash
                     Department at HSI company as their Front End Web Developer
                     Intern.
+                  </p>
+                  {/* <Link to="/" className="btn btn-link">
+                  read more
+                </Link> */}
+                </section>
+                {/* </a> */}
+              </section>
+            </div>
+            {/* ------------------------------------------- */}
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            >
+              <section>
+                <a
+                  href="https://maagad-gatsby-one.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
+                  <img
+                    src={GatsbyOne}
+                    className="w-full h-[70%] rounded-t-md cursor-pointer"
+                    alt="HSI Engage"
+                  />
+                </a>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Gatsby One
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    Just finished putting together a basic portfolio using
+                    Gatsby JS and GraphQL. It’s still a work in progress, but
+                    I’m excited about how it’s shaping up! It’s now live on
+                    Netlify!. Stay tuned for the final product!
                   </p>
                   {/* <Link to="/" className="btn btn-link">
                   read more
