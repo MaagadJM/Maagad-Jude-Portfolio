@@ -15,6 +15,9 @@ import BlackedManMount from "/blacked man_on_mountain.png";
 
 import BackToTop from "../../inc/BackToTop";
 
+import ResumeBtn from "./resumebtns/ResumeBtn";
+// import SplitBtn from "./resumebtns/SplitBtn";
+
 function Home({ setActiveLink }) {
   // const [activeLink, setActiveLink] = useState(null);
 
@@ -117,6 +120,7 @@ function Home({ setActiveLink }) {
               I design and develop high-end web experiences for <br />
               design-driven companies that value attention to detail.
             </p>
+            <ResumeBtn />
           </section>
         </section>
 

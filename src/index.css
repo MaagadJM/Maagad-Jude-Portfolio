@@ -58,6 +58,13 @@
   transform: rotate(360deg); 
 } */
 
+.resume-download {
+  color: #FFF5EA;
+  box-shadow: 0 1px 4px rgba(255, 224, 87, 0.8) !important;
+  background: -webkit-linear-gradient(0deg, #18181b50 1%, #ca8b04 5%, #18181b 90%, #18181b02);
+  padding: 10px 10%;
+}
+
 /* =================== FIRST SECTION END ================= */
 
 /* ==================== EXTRAS SECTION =================== */
