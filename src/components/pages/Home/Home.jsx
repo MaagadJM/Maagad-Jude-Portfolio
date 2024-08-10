@@ -109,7 +109,7 @@ function Home({ setActiveLink }) {
             >
               Front-End Web Developer <br /> & <br /> UI | UX Designer.
             </p>
-            <br /> <br />
+            <br />
             <p
               data-aos="fade-left"
               data-aos-delay="2000"
@@ -120,7 +120,15 @@ function Home({ setActiveLink }) {
               I design and develop high-end web experiences for <br />
               design-driven companies that value attention to detail.
             </p>
-            <ResumeBtn />
+            <br />
+            <div
+              data-aos="fade-left"
+              data-aos-delay="2400"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+            >
+              <ResumeBtn />
+            </div>
           </section>
         </section>
 
