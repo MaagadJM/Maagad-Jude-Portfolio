@@ -5,6 +5,7 @@ import HSIEngage from "/Thumbnails/HSI thumbnail.png";
 import TFSI from "/Thumbnails/Techforce Solutions Inc.png";
 import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 import GatsbyOne from "/Thumbnails/Gatsby One TN.png";
+import GsapOne from "/Thumbnails/GSAP One TN.png";
 
 import InteriorDesignTN from "/Thumbnails/Interior Design TN.png";
 import InteriorDesign from "../../images/Interior Design.png";
@@ -243,10 +244,48 @@ function Projects() {
                 {/* </a> */}
               </section>
             </div>
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                <a
+                  href="https://maagadjm.github.io/GSAP-one/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
+                  <img
+                    src={GsapOne}
+                    className="w-full h-[70%] rounded-t-md cursor-pointer"
+                    alt="HSI Engage"
+                  />
+                </a>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    GSAP inspired by CYBERFICTION
+                  </p>
+
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    I recently discovered the tutorials on CYBERFICTION, I was
+                    really inspired to experiment with attempt at replicating
+                    the genre's signature while pushing the boundaries of what's
+                    possible with GSAP animation tools.
+                  </p>
+                  {/* <Link to="/" className="btn btn-link">
+                  read more
+                </Link> */}
+                </section>
+                {/* </a> */}
+              </section>
+            </div>
             {/* ------------------------------------------ */}
             <div
-              className=" custom-border px-1 col-span-2"
-              data-aos="fade-right"
+              className=" custom-border px-1 col-span-1"
+              data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-delay="1500"
             >
