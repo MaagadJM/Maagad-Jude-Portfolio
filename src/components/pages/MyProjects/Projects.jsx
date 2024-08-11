@@ -170,9 +170,9 @@ function Projects() {
             {/* ------------------------------------------- */}
             <div
               className=" custom-border px-1"
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-duration="1000"
-              data-aos-delay="1000"
+              data-aos-delay="1500"
             >
               <section>
                 <a
@@ -208,7 +208,7 @@ function Projects() {
             {/* ------------------------------------------- */}
             <div
               className=" custom-border px-1"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-delay="1500"
             >
@@ -245,8 +245,8 @@ function Projects() {
             </div>
             {/* ------------------------------------------ */}
             <div
-              className=" custom-border px-1"
-              data-aos="fade-left"
+              className=" custom-border px-1 col-span-2"
+              data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-delay="1500"
             >
