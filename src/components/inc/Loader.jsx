@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Loader = ({ imageSrc, size = 100 }) => {
+const Loader = ({ imageSrc }) => {
     return (
         <div className="spinner-loader">
           <div className="spinner"></div>

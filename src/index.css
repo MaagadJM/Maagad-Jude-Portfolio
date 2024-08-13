@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #18181b;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8); /* Scale up slightly for exit effect */
+  }
+}
+
 .spinner-loader {
   display: flex;
   justify-content: center;
@@ -13,6 +48,10 @@
   left: 0;
   width: 100%;
   z-index: 9999;
+
+  opacity: 0; /* Start hidden */
+  transform: scale(0.8); /* Start scaled down */
+  animation: appear 1s forwards, disappear 1s 2s forwards;
 }
 
 .spinner {
@@ -21,7 +60,7 @@
   border-radius: 50%;
   width: 50rem;
   height: 50rem;
-  animation: spin 2s linear infinite;
+  animation: spin 1.5s linear infinite;
 }
 
 @media (max-width: 497px) {
@@ -66,15 +105,6 @@
     top: 20%; */
     width: 30rem;
     height: 30rem;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 
