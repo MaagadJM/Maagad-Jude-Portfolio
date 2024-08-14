@@ -47,7 +47,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 100;
 
   opacity: 0; /* Start hidden */
   transform: scale(0.8); /* Start scaled down */
@@ -554,3 +554,24 @@ html {
 }
 
 /* ======================== */
+
+/* #gsap-overlay {
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999999 !important;
+} */
+
+
+.overlay-one {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

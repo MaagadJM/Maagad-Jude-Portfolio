@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import gsap from "gsap";
+
 import Slider from "../../inc/Slider";
 import { Link } from "react-router-dom";
 import VMC from "../inc/Vmc";
@@ -39,6 +41,20 @@ function Home({ setActiveLink }) {
     // AOS.refresh();
   }, []);
 
+  // ======================= //
+  // const mainRef = useRef(null);
+
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
+  //   tl.fromTo(
+  //     mainRef.current,
+  //     { opacity: 0 },
+  //     { opacity: 1, duration: 3, ease: "power2.inOut" }
+  //   );
+  // }, [mainRef]);
+
+  // ======================= //
+
   // ======== Parallax Scrolling ========= //
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
@@ -66,6 +82,7 @@ function Home({ setActiveLink }) {
       {/* ========================= FIRST SECTION ========================== */}
 
       <div
+        // ref={mainRef}
         id="first-sect"
         className="xxs:h-[180vh] sm:h-[92vh] xl:h-[95vh] w-screen sm:content-center"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}

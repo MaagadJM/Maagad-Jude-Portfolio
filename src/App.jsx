@@ -1,7 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import gsap from "gsap";
+
+import OverlayOne from "./components/inc/LoaderComponents/OverlayOne";
+
 import "./App.css";
 
-import Loader from "./components/inc/Loader";
+import Loader from "./components/inc/LoaderComponents/Loader";
+
+import LoaderTwo from "./components/inc/LoaderComponents/LoaderTwo";
 
 import Home from "./components/pages/Home/Home";
 import Aboutme from "./components/pages/AboutMe/About";
@@ -23,22 +29,36 @@ function App() {
     }, 4000); // Change this time to however long your loading takes
   }, []);
 
+  // ======================================= //
+
   return (
     // <HashRouter>
-    <main className="overflow-x-hidden">
-      {loading && <Loader imageSrc={ImageLoader} />}
-      {!loading && (
-        <>
-          <Navbar />
-          <Routes>
-            <Route exact path="/" element={<Home />}></Route>
-            <Route path="/about" element={<Aboutme />}></Route>
-            <Route path="/contact" element={<Contactme />}></Route>
-            <Route path="/projects" element={<Projects />}></Route>
-          </Routes>
-          <Footer />
-        </>
-      )}
+    <main>
+
+
+
+      <section
+        // ref={mainRef}
+        className="overflow-x-hidden"
+      >
+        {loading && <Loader imageSrc={ImageLoader} />}
+        {!loading && (
+          
+          <section
+          // id="gsap-overlay" className="bg-[#CA0503] w-screen h-screen"
+          >
+            <OverlayOne />
+            <Navbar />
+            <Routes>
+              <Route exact path="/" element={<Home />}></Route>
+              <Route path="/about" element={<Aboutme />}></Route>
+              <Route path="/contact" element={<Contactme />}></Route>
+              <Route path="/projects" element={<Projects />}></Route>
+            </Routes>
+            <Footer />
+          </section>
+        )}
+      </section>
     </main>
     // </HashRouter>
   );
