@@ -13,7 +13,7 @@ import UserprofileDP from "../images/Maagad2x2.jpg";
 const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
-  { name: "My Contact", href: "/contact", current: false },
+  { name: "Contacts", href: "/contact", current: false },
   { name: "Projects", href: "/projects", current: false },
 ];
 

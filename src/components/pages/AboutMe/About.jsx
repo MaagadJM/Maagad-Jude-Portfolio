@@ -8,6 +8,8 @@ import "aos/dist/aos.css";
 import VMC from "../inc/Vmc";
 import STIGradPic from "../../images/STI Gradpic.jpg";
 
+import CCNA_IP_SubnettingTN from "/Thumbnails/Master IP Addressing and Subnetting for CCNA TN.png";
+
 // import SAPBasic from "/PDF/SAP Advance (Implementation & Support) Certificate - Maagad.pdf";
 import SAPBasicTN from "/Thumbnails/SAP Basic Thumbnail.png";
 import SAPAdvanceTN from "/Thumbnails/SAP Advance Thumbnail.png";
@@ -85,7 +87,7 @@ function Aboutme() {
               <br />
               <p
                 data-aos="fade-right"
-                data-aos-delay="2000"
+                data-aos-delay="1800"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-sine"
               >
@@ -96,7 +98,7 @@ function Aboutme() {
               <br />
               <p
                 data-aos="fade-right"
-                data-aos-delay="2200"
+                data-aos-delay="2000"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-sine"
               >
@@ -115,6 +117,17 @@ function Aboutme() {
               >
                 I possess experience in SAP systems, having obtained both basic
                 and advanced certifications.
+              </p>
+              <br />
+              <p
+                data-aos="fade-right"
+                data-aos-delay="2200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-sine"
+              >
+                Furthermore, I have a strong foundation in cloud computing, with
+                hands-on experience utilizing both AWS and Huawei Cloud
+                platforms.
               </p>
             </section>
 
@@ -148,12 +161,53 @@ function Aboutme() {
               className="lg:col-span-2 base:mt-10 lg:mt-36 "
               // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
             >
+              <p className="text-3xl font-light">MNET Certificate for CCNA</p>
+              <div className="underline"></div>
+            </section>
+
+            <section
+              data-aos="fade-right"
+              data-aos-delay="700"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="flex items-center justify-center"
+            >
+              <a
+                href={CCNA_IP_SubnettingTN}
+                target="_blank"
+                rel="noopener noreferrer"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="a-image-shadow rounded-[1%]"
+                style={{ position: "relative", display: "inline-block" }}
+              >
+                <img
+                  src={CCNA_IP_SubnettingTN}
+                  alt="Certificate Thumbnail"
+                  className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%]  spin-hover"
+                  style={{
+                    // transform: `translateY(${offsetY * 0.1}px)`,
+                    pointerEvents: "none",
+                    display: "block",
+                  }}
+                  draggable="false"
+                />
+              </a>
+            </section>
+
+            <section
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+              className="lg:col-span-2 base:mt-10 lg:mt-36 "
+              // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+            >
               <p className="text-3xl font-light">SAP Certificates</p>
               <div className="underline"></div>
             </section>
 
             <section
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-delay="700"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
@@ -243,7 +297,7 @@ function Aboutme() {
             </section>
 
             <section
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-delay="1000"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"

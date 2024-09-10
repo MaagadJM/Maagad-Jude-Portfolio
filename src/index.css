@@ -157,12 +157,12 @@ html {
 /* =========== IMAGE SHADOW HOVER ============ */
 
 .f-image-shadow {
-  box-shadow: 0px 0px 30px #000000b3;
+  box-shadow: 0px 5px 15px #000000b3;
   transition: box-shadow 0.3s ease;
 }
 
 .f-image-shadow:hover {
-  box-shadow: 0 0 120px rgba(255, 224, 87, 0.8) !important; /* Yellow shadow color */
+  box-shadow: 0 -5px 20px rgba(187, 164, 62, 0.8) !important; /* Yellow shadow color */
 }
 
 /* .spin-hover {

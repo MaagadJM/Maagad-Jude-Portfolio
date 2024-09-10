@@ -3,7 +3,7 @@ import SplitButton from "./SplitBtn";
 const ResumeBtn = () => {
   return (
     <div>
-      <SplitButton pdfUrl="/Maagad-Jude-Portfolio/PDF/Maagad, Jude Michael - Front-End Web Developer - UIUX.pdf" />
+      <SplitButton pdfUrl="/Maagad-Jude-Portfolio/PDF/Maagad, Jude Michael - AWS Cloud - Front-End - UIUX.pdf" />
     </div>
   );
 };

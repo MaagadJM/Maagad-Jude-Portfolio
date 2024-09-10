@@ -18,7 +18,7 @@ function Footer() {
                 type specimen book.{" "}
               </p>
             </div> */}
-              <div className="col-md-6 font-light text-xl">
+              <div className="col-md-6 font-light text-xl z-1">
                 <p>Quick Links</p>
                 <hr className="text-[#ca8b04]" />
                 <div>
@@ -57,7 +57,7 @@ function Footer() {
           </div>
         </section>
 
-        <div className="py-10 mx-[15%]">
+        <div className="grid py-10 mx-[15%]">
           {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19434.68447561604!2d120.82993000588208!3d14.862821500948954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1710677133536!5m2!1sen!2sph"
             width="100%"
@@ -72,7 +72,8 @@ function Footer() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61707.475463848394!2d120.94566310141343!3d14.841120701582012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ac22ac27a55f%3A0x4a8611643c5c0dd0!2sSanta%20Maria%2C%20Bulacan!5e0!3m2!1sen!2sph!4v1721816779438!5m2!1sen!2sph"
             width="100%"
             height="150"
-            style={{ border: 0, borderRadius: "10px" }}
+            className="z-1 border-none rounded-lg"
+            // style={{ border: 0, borderRadius: "10px" }}
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
