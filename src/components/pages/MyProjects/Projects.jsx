@@ -6,6 +6,7 @@ import TFSI from "/Thumbnails/Techforce Solutions Inc.png";
 import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 import GatsbyOne from "/Thumbnails/Gatsby One TN.png";
 import GsapOne from "/Thumbnails/GSAP One TN.png";
+import JHPsereno from "/Thumbnails/JHP-SERENO TN.png";
 
 import InteriorDesignTN from "/Thumbnails/Interior Design TN.png";
 import InteriorDesign from "../../images/Interior Design.png";
@@ -132,9 +133,50 @@ function Projects() {
               </section>
             </div>
             {/* ----------------------------------------- */}
+
             <div
               className=" custom-border px-1"
               data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                <a
+                  href="https://maagadjm.github.io/Maagad-JHP-SERENO/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
+                  <img
+                    src={JHPsereno}
+                    className="w-full h-[70%] rounded-t-md cursor-pointer"
+                    alt="HSI Engage"
+                  />
+                </a>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    Revamping JHP Sereno Service Section
+                  </p>
+
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    Revamped the JHP Sereno service section with a modern design
+                    and improved user experience. Optimized the layout for
+                    better readability and organized the inquiry form process.
+                  </p>
+                  {/* <Link to="/" className="btn btn-link">
+                  read more
+                </Link> */}
+                </section>
+                {/* </a> */}
+              </section>
+            </div>
+
+            {/* ----------------------------------------- */}
+
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-delay="1000"
             >
@@ -148,7 +190,7 @@ function Projects() {
                   <img
                     src={TFSI}
                     className="w-full h-[70%] rounded-t-md cursor-pointer"
-                    alt="HSI Engage"
+                    alt=""
                   />
                 </a>
                 <section className="mx-4 mt-[20px]">
@@ -171,7 +213,7 @@ function Projects() {
             {/* ------------------------------------------- */}
             <div
               className=" custom-border px-1"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-delay="1500"
             >
@@ -209,9 +251,9 @@ function Projects() {
             {/* ------------------------------------------- */}
             <div
               className=" custom-border px-1"
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-duration="1000"
-              data-aos-delay="1500"
+              data-aos-delay="1000"
             >
               <section>
                 <a
@@ -246,7 +288,7 @@ function Projects() {
             </div>
             <div
               className=" custom-border px-1"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-delay="1500"
             >
@@ -283,9 +325,11 @@ function Projects() {
               </section>
             </div>
             {/* ------------------------------------------ */}
+
+            {/* ------------------------------------------ */}
             <div
               className=" custom-border px-1 col-span-1"
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-delay="1500"
             >
