@@ -2,6 +2,9 @@ import React from "react";
 
 function VMC() {
   return (
+    
+    // FOR TESTING OF DATA ROUTING
+
     <section className="section bg-c-light border-top">
       <div className="container">
         <div className="row">
