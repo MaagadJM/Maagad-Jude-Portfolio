@@ -306,12 +306,13 @@ html {
     position: relative;
     padding-top: 20px;
     /* border: 2px solid #635b4b; */
+    border: 2px solid #18181b;
     border-radius: 15px;
-    background-color: #302c2580;
+    /* background-color: #302c2580; */
 
-    background: #18181b;
+    background-color: #18181b;
     box-shadow: 14px 14px 33px #111113, -14px -14px 33px #1f1f23;
-    transition: box-shadow 0.5s ease-in-out;
+    /* transition: box-shadow 0.5s ease-in-out; */
   }
 
   .custom-border:hover {
@@ -327,7 +328,7 @@ html {
     transform: translateX(-50%);
     width: 50%;
     height: 3.5%;
-    background-color: #18181b;
+    background-color: #202020;
     /* border: 2px solid #ca8b04 !important; */
     border-bottom: none;
     border-top: none;
@@ -339,7 +340,7 @@ html {
   }
 
   .custom-border:hover:before {
-    background-color: #635b4b;
+    background-color: #202020;
     border: 2px outset #ca8b04 !important;
     width: 80%;
   }
