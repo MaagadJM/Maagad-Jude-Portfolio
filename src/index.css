@@ -471,6 +471,25 @@ html {
 
 /* =================== CONTACT SECTION ================= */
 
+#cntc-sec a {
+  display: flex;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #161618, #1a1a1d);
+  box-shadow: 9px 9px 18px #131316, -9px -9px 18px #1d1d20;
+  margin: 5px;
+}
+#cntc-sec a:hover {
+  background: linear-gradient(315deg, #161618, #1a1a1d);
+  box-shadow: -9px -9px 18px #131316, 9px 9px 18px #1d1d20;
+}
+
+#cntc-sec a p {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+}
+
 #contacts-hov {
   position: relative;
   display: inline-block;
@@ -485,7 +504,7 @@ html {
     #f0d9af 40%,
     #ffbb00 100%
   );
-  background-size: 200% 100%;
+  background-size: 300% 100%;
   background-repeat: no-repeat;
   transition: background-position 0.5s ease; /* Smooth transition for hover effect */
 }
