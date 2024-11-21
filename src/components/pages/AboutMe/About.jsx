@@ -8,6 +8,8 @@ import "aos/dist/aos.css";
 import VMC from "../inc/Vmc";
 import STIGradPic from "../../images/STI Gradpic.jpg";
 
+import AwsPythonML from "/Thumbnails/AWS and Python.png";
+
 import CCNA_IP_SubnettingTN from "/Thumbnails/Master IP Addressing and Subnetting for CCNA TN.png";
 
 // import SAPBasic from "/PDF/SAP Advance (Implementation & Support) Certificate - Maagad.pdf";
@@ -161,6 +163,47 @@ function Aboutme() {
               className="lg:col-span-2 base:mt-10 lg:mt-36 "
               // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
             >
+              <p className="text-3xl font-light">Mind Luster Certificate</p>
+              <div className="underline"></div>
+            </section>
+
+            <section
+              data-aos="fade-right"
+              data-aos-delay="700"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="flex items-center justify-center"
+            >
+              <a
+                href="https://www.mindluster.com/student/certificate/22b23400"
+                target="_blank"
+                rel="noopener noreferrer"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="a-image-shadow rounded-[1%]"
+                style={{ position: "relative", display: "inline-block" }}
+              >
+                <img
+                  src={AwsPythonML}
+                  alt="Certificate Thumbnail"
+                  className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%]  spin-hover"
+                  style={{
+                    // transform: `translateY(${offsetY * 0.1}px)`,
+                    pointerEvents: "none",
+                    display: "block",
+                  }}
+                  draggable="false"
+                />
+              </a>
+            </section>
+
+            <section
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+              className="lg:col-span-2 base:mt-10 lg:mt-36 "
+              // style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+            >
               <p className="text-3xl font-light">MNET Certificate for CCNA</p>
               <div className="underline"></div>
             </section>
@@ -173,7 +216,7 @@ function Aboutme() {
               className="flex items-center justify-center"
             >
               <a
-                href={CCNA_IP_SubnettingTN}
+                href="https://s3-ap-southeast-1.amazonaws.com/learnyst/schools/22311/certificates/52583/10397536_52583.pdf?1725533561"
                 target="_blank"
                 rel="noopener noreferrer"
                 onContextMenu={(e) => e.preventDefault()}
