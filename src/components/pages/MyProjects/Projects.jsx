@@ -570,7 +570,7 @@ function Projects() {
                 <video
                   className="w-full h-[70%] rounded-t-md cursor-pointer"
                   controls
-                  poster="/Slingshot Board TN.png"
+                  poster="/Thumbnails/Slingshot Board TN.png"
                 >
                   <source
                     src="/MP4/Slingshot Board.mp4"
