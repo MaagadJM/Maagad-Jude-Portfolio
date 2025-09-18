@@ -570,10 +570,10 @@ function Projects() {
                 <video
                   className="w-full h-[70%] rounded-t-md cursor-pointer"
                   controls
-                  poster="/Maagad-Jude-Portfolio/Thumbnails/Slingshot Board TN.png"
+                  poster="/Slingshot Board TN.png"
                 >
                   <source
-                    src="/Maagad-Jude-Portfolio/MP4/Slingshot Board.mp4"
+                    src="/MP4/Slingshot Board.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
