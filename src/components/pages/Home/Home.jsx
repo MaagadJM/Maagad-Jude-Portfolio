@@ -1,19 +1,19 @@
 import React, { useRef, useState, useEffect } from "react";
-import gsap from "gsap";
+// import gsap from "gsap";
 
-import Slider from "../../inc/Slider";
-import { Link } from "react-router-dom";
-import VMC from "../inc/Vmc";
+// import Slider from "../../inc/Slider";
+// import { Link } from "react-router-dom";
+// import VMC from "../inc/Vmc";
 import Projects from "../MyProjects/Projects";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Service1 from "/Thumbnails/HSI thumbnail.png";
+// import Service1 from "/Thumbnails/HSI thumbnail.png";
 import MeCropped from "../../images/MeCropped.jpg";
 
 import { feicons } from "../Carousel/feicons";
 
-import RHouseMount from "/right house mountain.png";
-import BlackedManMount from "/blacked man_on_mountain.png";
+// import RHouseMount from "/right house mountain.png";
+// import BlackedManMount from "/blacked man_on_mountain.png";
 
 import BackToTop from "../../inc/BackToTop";
 
