@@ -36,14 +36,21 @@ function SpinningBox(props) {
     // </mesh>
 
     <animated.mesh {...props} ref={meshRef} rotation={rotation} scale={[1.5, 1.5, 1.5]}>
-      <boxGeometry args={[1.5, 1.5, 1.5]} />
+
+      {/* <boxGeometry args={[1.5, 1.5, 1.5]} /> */}
+      <sphereGeometry args={[1.5, 32, 32]} />
+      {/* <coneGeometry args={[1, 2, 32]} /> */}
+      <torusGeometry args={[1, 0.4, 16, 100]} />
+      {/* <icosahedronGeometry args={[1.5]} /> */}
+
       {/* Changed to MeshPhysicalMaterial for more realistic metal/gloss effects */}
       <meshPhysicalMaterial 
-        color={'#6A0DAD'} // A slightly darker purple
+
+        color={'#ffc400'}
         metalness={0.9}   // Make it very metallic
         roughness={0.1}   // Make it quite glossy
         clearcoat={1}     // Add a clear coat for extra shine
-        clearcoatRoughness={0.1}
+        clearcoatRoughness={0.9}
       />
     </animated.mesh>
 
@@ -87,7 +94,7 @@ export default function My3DScene() {
         <pointLight position={[-10, -10, -10]} intensity={0.5} />
 
         {/* Use Environment for realistic lighting and reflections from an HDRI */}
-        <Environment preset="city" background /> 
+        <Environment preset="night" background /> 
 
         {/* Add a subtle floor with contact shadows */}
         <ContactShadows position={[0, -1.8, 0]} scale={10} blur={2} far={2} opacity={0.5} />
@@ -96,7 +103,7 @@ export default function My3DScene() {
         <SpinningBox position={[0, 0.5, 0]} /> {/* Lift the box slightly above the floor */}
         
         {/* Add mouse controls to rotate and zoom */}
-        <OrbitControls enableZoom={false} enablePan={false} /> {/* Disable zoom/pan for a cleaner look */}
+        <OrbitControls enableZoom={true} enablePan={true} /> {/* Disable zoom/pan for a cleaner look */}
       </Canvas>
     </div>
 
