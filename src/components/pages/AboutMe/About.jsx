@@ -9,6 +9,7 @@ import VMC from "../inc/Vmc";
 import STIGradPic from "../../images/STI Gradpic.jpg";
 
 import AwsPythonML from "/Thumbnails/AWS and Python.png";
+import OracleSqlTN from "/Thumbnails/Oracle SQL.jpg";
 
 import CCNA_IP_SubnettingTN from "/Thumbnails/Master IP Addressing and Subnetting for CCNA TN.png";
 
@@ -185,6 +186,36 @@ function Aboutme() {
               >
                 <img
                   src={AwsPythonML}
+                  alt="Certificate Thumbnail"
+                  className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%]  spin-hover"
+                  style={{
+                    // transform: `translateY(${offsetY * 0.1}px)`,
+                    pointerEvents: "none",
+                    display: "block",
+                  }}
+                  draggable="false"
+                />
+              </a>
+            </section>
+
+                        <section
+              data-aos="fade-left"
+              data-aos-delay="700"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="flex items-center justify-center"
+            >
+              <a
+                href="https://www.mindluster.com/student/certificate/783d2b05"
+                target="_blank"
+                rel="noopener noreferrer"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="a-image-shadow rounded-[1%]"
+                style={{ position: "relative", display: "inline-block" }}
+              >
+                <img
+                  src={OracleSqlTN}
                   alt="Certificate Thumbnail"
                   className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%]  spin-hover"
                   style={{

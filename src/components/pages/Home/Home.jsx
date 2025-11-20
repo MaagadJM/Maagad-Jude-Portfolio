@@ -124,7 +124,7 @@ function Home({ setActiveLink }) {
               data-aos-easing="ease-in-sine"
               className="text-4xl font-light"
             >
-              Front-End Web Developer <br /> & <br /> UI | UX Designer.
+              Software Developer / Engineer <br />  <br /> UI | UX Designer.
             </p>
             <br />
             <p
@@ -134,8 +134,9 @@ function Home({ setActiveLink }) {
               data-aos-easing="ease-in-sine"
               className="text-2xl font-light"
             >
-              I design and develop high-end web experiences for <br />
-              design-driven companies that value attention to detail.
+              To obtain a position with a company where I can grow my skills 
+              <br /> <br />
+              I design and develop high-end web experiences for design-driven companies that value attention to detail.
             </p>
             <br />
             <div
