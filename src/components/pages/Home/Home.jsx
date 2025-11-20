@@ -4,7 +4,7 @@ import gsap from "gsap";
 import Slider from "../../inc/Slider";
 import { Link } from "react-router-dom";
 import VMC from "../inc/Vmc";
-import Work from "../WorkExperiences/work";
+import JobExperiences from "../JobsExperiences/Jobs";
 import Projects from "../MyProjects/Projects";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -185,7 +185,7 @@ function Home({ setActiveLink }) {
         </section>
       </section>
 
-          <Work />
+      <JobExperiences />
 
       {/* ============================= PROJECT SECTION ============================== */}
       <Projects />

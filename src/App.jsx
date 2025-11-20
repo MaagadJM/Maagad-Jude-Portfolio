@@ -10,6 +10,7 @@ import "./App.css";
 import Home from "./components/pages/Home/Home";
 import Aboutme from "./components/pages/AboutMe/About";
 import Contactme from "./components/pages/MyContacts/Contact";
+import Jobs from "./components/pages/JobsExperiences/Jobs";
 import Projects from "./components/pages/MyProjects/Projects";
 import Navbar from "./components/inc/Navbar";
 import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
@@ -48,6 +49,7 @@ function App() {
               <Route path="/about" element={<Aboutme />}></Route>
               <Route path="/contact" element={<Contactme />}></Route>
               <Route path="/projects" element={<Projects />}></Route>
+              <Route path="/jobs" element={<Jobs />}></Route>
             </Routes>
             <Footer />
           </section>
