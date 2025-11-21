@@ -1,9 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 // import gsap from "gsap";
 
-import Slider from "../../inc/Slider";
-import { Link } from "react-router-dom";
-import VMC from "../inc/Vmc";
 import JobExperiences from "../JobsExperiences/Jobs";
 import Projects from "../MyProjects/Projects";
 import AOS from "aos";
