@@ -23,6 +23,8 @@ import GreenNeonPic from "../../images/Green Neon Canva.png";
 import PurpleNeonTN from "/Thumbnails/Purple Neon Canva TN.png";
 import PurpleNeonPic from "../../images/Purple Neon Canva.png";
 
+import ThreeDScene from "../../ThreeDScene"
+
 // import HSILogoPic from "/Thumbnails/HSI Logo TN.png";
 // import HSILogoVid from "/MP4/HSI Logo.mkv";
 
@@ -427,6 +429,11 @@ function Projects() {
                 bring your Blender designs to life!
               </p>
             </div>
+
+                  <div className="md:col-span-2 mt-24">
+            
+                    <ThreeDScene />
+                  </div>
 
             <div
               className=" custom-border px-1"
