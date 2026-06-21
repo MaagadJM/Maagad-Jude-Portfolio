@@ -70,14 +70,13 @@ function Projects() {
                                     onContextMenu={(e) => e.preventDefault()}
                                     draggable="false"
                                     className="a-image-shadow rounded-[1%]"
-                                    style={{ position: "relative", display: "inline-block", padding: "15px" }}
+                                    style={{ position: "relative", display: "block", padding: "15px" }}
                                 >
                                     <img
                                         src={ShopNBidTN}
                                         alt="Certificate Thumbnail"
-                                        className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%]  spin-hover"
+                                        className="rounded-[1%] w-full md:h-80 lg:h-[80%] spin-hover"
                                         style={{
-                                            // transform: `translateY(${offsetY * 0.1}px)`,
                                             pointerEvents: "none",
                                             display: "block",
                                         }}
@@ -87,13 +86,27 @@ function Projects() {
                                 </a>
 
                                 <section className="mx-0 mt-[20px]">
-                                    <p className="text-[#FFF5EA] text-3xl font-light">
-                                        Shop N' Bid <br /> E-commerce system
-                                    </p>
-                                    <div className="underline"></div>
-                                    <p className="text-[#FFF5EA] mt-2">
-                                        Revised the mobile version of the Shop N' Bid E-commerce system to enhance user experience and accessibility.
-                                    </p>
+
+
+
+                                    <a
+                                        href="https://hmr.ph/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onContextMenu={(e) => e.preventDefault()}
+                                        draggable="false"
+                                        className="a-image-shadow rounded-[1%] no-underline text-inherit"
+                                        style={{ position: "relative", display: "inline-block", padding: "15px" }}
+                                    >
+                                        <p className="text-[#FFF5EA] text-3xl font-light">
+                                            Shop N' Bid <br /> E-commerce system
+                                        </p>
+                                        <div className="underline"></div>
+                                        <p className="text-[#FFF5EA] mt-2">
+                                            Revised the old design version of the Shop N' Bid E-commerce system to enhance user experience and accessibility.
+                                        </p>
+
+                                    </a>
 
                                 </section>
 
@@ -107,7 +120,7 @@ function Projects() {
                             data-aos-duration="1000"
                             data-aos-delay="1000"
                         >
-         
+
                             <section
                                 data-aos="fade-left"
                                 data-aos-delay="700"
@@ -123,14 +136,13 @@ function Projects() {
                                     onContextMenu={(e) => e.preventDefault()}
                                     draggable="false"
                                     className="a-image-shadow rounded-[1%]"
-                                    style={{ position: "relative", display: "inline-block", padding: "15px" }}
+                                    style={{ position: "relative", display: "block", padding: "15px" }}
                                 >
                                     <img
                                         src={ExtrimV3TN}
                                         alt="Certificate Thumbnail"
-                                        className="rounded-[1%] xxs:h-48 md:h-80 lg:h-[80%]  spin-hover"
+                                        className="rounded-[1%] w-full md:h-80 lg:h-[80%] spin-hover"
                                         style={{
-                                            // transform: `translateY(${offsetY * 0.1}px)`,
                                             pointerEvents: "none",
                                             display: "block",
                                         }}

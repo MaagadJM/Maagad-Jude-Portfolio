@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import HSIEngage from "/Thumbnails/HSI thumbnail.png";
+import AllinOneApp from "/Thumbnails/All in One App TN.png";
 import TFSI from "/Thumbnails/Techforce Solutions Inc.png";
 import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 import GatsbyOne from "/Thumbnails/Gatsby One TN.png";
@@ -132,6 +133,45 @@ function Projects() {
                 {/* </a> */}
               </section>
             </div>
+            {/* ----------------------------------------- */}
+
+
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
+              <section>
+                <a
+                  href="https://react-django-task-manager-gray.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
+                  <img
+                    src={AllinOneApp}
+                    className="w-full h-[70%] rounded-t-md cursor-pointer"
+                    alt="HSI Engage"
+                  />
+                </a>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    All-in-One App
+                  </p>
+
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    A full-stack React + Django app with JWT auth, guest access, dark mode, and two modules — a Task Manager and an OIG Exclusion Screener that queries the federal LEIE database. Features daily rate limiting and a real-time server health monitor.
+                  </p>
+                  {/* <Link to="/" className="btn btn-link">
+                  read more
+                </Link> */}
+                </section>
+                {/* </a> */}
+              </section>
+            </div>
+
             {/* ----------------------------------------- */}
 
             <div
