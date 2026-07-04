@@ -49,7 +49,7 @@ body,
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 6;
 
   opacity: 0; /* Start hidden */
   transform: scale(0.8); /* Start scaled down */
@@ -306,6 +306,7 @@ body,
 
   .custom-border {
     position: relative;
+    z-index: 4;
     padding-top: 20px;
     /* border: 2px solid #635b4b; */
     border: 2px solid #18181b;
@@ -475,6 +476,8 @@ body,
 
 #cntc-sec a {
   display: flex;
+  position: relative;
+  z-index: 4;
   border-radius: 10px;
   background: linear-gradient(145deg, #161618, #1a1a1d);
   box-shadow: 9px 9px 18px #131316, -9px -9px 18px #1d1d20;
@@ -547,7 +550,7 @@ body,
   opacity: 0;
   visibility: hidden; /* Start hidden */
   transition: opacity 0.5s ease, visibility 0.5s ease, box-shadow 0.3s ease;
-  z-index: 1000;
+  z-index: 5;
 }
 
 #back-to-top-btn.visible {
@@ -561,7 +564,7 @@ body,
 
 #back-to-top path {
   animation: fillAnimation 3s linear infinite;
-  z-index: 99 !important;
+  z-index: 5 !important;
 }
 
 @keyframes fillAnimation {

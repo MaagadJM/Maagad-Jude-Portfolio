@@ -5,7 +5,7 @@ function Contactme() {
   return (
     <>
       <ParticleBackground />
-      <section className="text-[#FFF5EA] h-screen relative z-[1]">
+      <section className="text-[#FFF5EA] h-screen relative z-[4]">
         <div
           id="cntc-sec"
           className="container h-full grid content-center justify-center items-center gap-y-4"

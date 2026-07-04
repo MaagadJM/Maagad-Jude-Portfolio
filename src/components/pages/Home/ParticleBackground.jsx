@@ -244,8 +244,9 @@ export default function ParticleBackground() {
         left: 0,
         width: "100vw",
         height: "100vh",
-        zIndex: 0,
+        zIndex: 3,
         pointerEvents: "none",
+        mixBlendMode: "difference",
       }}
     >
       <Canvas
