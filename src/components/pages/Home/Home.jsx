@@ -43,7 +43,6 @@ function Home({ setActiveLink }) {
     // AOS.refresh();
   }, []);
 
-  // ======================= //
   // const mainRef = useRef(null);
 
   // useEffect(() => {
@@ -55,9 +54,6 @@ function Home({ setActiveLink }) {
   //   );
   // }, [mainRef]);
 
-  // ======================= //
-
-  // ======== Parallax Scrolling ========= //
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -67,13 +63,9 @@ function Home({ setActiveLink }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ======== Parallax Scrolling END ========= //
-
   const handleReadMoreClick = () => {
-    // Set the active link to 1 (index of "About Me" in the Navbar)
     setActiveLink(1);
 
-    // Manually add the active class to the About Me link
     const aboutLink = document.querySelector(".nav-link[href='/about']");
     if (aboutLink) {
       aboutLink.classList.add("active");
@@ -83,8 +75,6 @@ function Home({ setActiveLink }) {
   return (
     <>
       <ParticleBackground />
-      {/* ========================= FIRST SECTION ========================== */}
-
       <div
         // ref={mainRef}
         id="first-sect"
@@ -169,7 +159,6 @@ function Home({ setActiveLink }) {
         /> */}
       </div>
 
-      {/* ========================= FIRST SECTION END ========================== */}
       <section
         id="extras-sect"
         className=" flex space-x-16 overflow-hidden group"
@@ -190,11 +179,7 @@ function Home({ setActiveLink }) {
 
       <JobExperiences />
 
-      {/* ============================= PROJECT SECTION ============================== */}
       <Projects />
-      {/* ============================= PROJECT SECTION ============================== */}
-
-      {/* ========================= THIRD SECTION ========================== */}
 
       {/* <section
         className=""
@@ -241,12 +226,7 @@ function Home({ setActiveLink }) {
         </section>
       </section> */}
 
-      {/* ========================= THIRD SECTION END ========================== */}
-
-      {/* My VISION, MISSION and VALUES */}
       {/* <VMC /> */}
-
-      {/* My Services */}
 
       {/* <section
         className="section border-top"

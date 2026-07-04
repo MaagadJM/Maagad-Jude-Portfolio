@@ -6,7 +6,6 @@ const PARTICLE_COUNT = 500;
 const CONNECTION_DISTANCE = 1.5;
 const MAX_CONNECTIONS = 600;
 
-// Global mouse position normalized to [-1, 1]
 const globalMouse = { x: 0, y: 0 };
 if (typeof window !== "undefined") {
   window.addEventListener("mousemove", (e) => {
@@ -21,11 +20,14 @@ function ParticleNetwork() {
   const mouseRef = useRef(new THREE.Vector2(0, 0));
   const { viewport } = useThree();
 
-  const { positions, velocities, sizes, linePositions, lineColors } =
+  const { positions, velocities, sizes, opacities, blinkSpeeds, blinkOffsets, linePositions, lineColors } =
     useMemo(() => {
       const positions = new Float32Array(PARTICLE_COUNT * 3);
       const velocities = new Float32Array(PARTICLE_COUNT * 3);
       const sizes = new Float32Array(PARTICLE_COUNT);
+      const opacities = new Float32Array(PARTICLE_COUNT);
+      const blinkSpeeds = new Float32Array(PARTICLE_COUNT);
+      const blinkOffsets = new Float32Array(PARTICLE_COUNT);
       const linePositions = new Float32Array(MAX_CONNECTIONS * 2 * 3);
       const lineColors = new Float32Array(MAX_CONNECTIONS * 2 * 4);
 
@@ -34,7 +36,6 @@ function ParticleNetwork() {
         positions[i * 3 + 1] = (Math.random() - 0.5) * 20;
         positions[i * 3 + 2] = (Math.random() - 0.5) * 6;
 
-        // Random drift velocity for each particle
         const speed = 0.3 + Math.random() * 0.4;
         const angle = Math.random() * Math.PI * 2;
         const angleZ = (Math.random() - 0.5) * Math.PI * 0.5;
@@ -43,9 +44,12 @@ function ParticleNetwork() {
         velocities[i * 3 + 2] = Math.sin(angleZ) * speed * 0.3;
 
         sizes[i] = Math.random() * 3 + 1;
+        opacities[i] = 1.0;
+        blinkSpeeds[i] = 0.3 + Math.random() * 1.2;
+        blinkOffsets[i] = Math.random() * Math.PI * 2;
       }
 
-      return { positions, velocities, sizes, linePositions, lineColors };
+      return { positions, velocities, sizes, opacities, blinkSpeeds, blinkOffsets, linePositions, lineColors };
     }, []);
 
   useFrame(({ clock }, delta) => {
@@ -61,20 +65,16 @@ function ParticleNetwork() {
     const time = clock.getElapsedTime();
     const dt = Math.min(delta, 0.05);
 
-    // Update particle positions with drift + mouse influence
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       const i3 = i * 3;
 
-      // Slowly change direction over time for organic movement
       const wanderX = Math.sin(time * 0.2 + i * 1.7) * 0.1;
       const wanderY = Math.cos(time * 0.15 + i * 2.3) * 0.1;
 
-      // Move by velocity + wander
       posArr[i3] += (velocities[i3] + wanderX) * dt;
       posArr[i3 + 1] += (velocities[i3 + 1] + wanderY) * dt;
       posArr[i3 + 2] += velocities[i3 + 2] * dt;
 
-      // Wrap around edges so particles stay in view
       if (posArr[i3] > 12) posArr[i3] = -12;
       if (posArr[i3] < -12) posArr[i3] = 12;
       if (posArr[i3 + 1] > 12) posArr[i3 + 1] = -12;
@@ -82,7 +82,6 @@ function ParticleNetwork() {
       if (posArr[i3 + 2] > 4) posArr[i3 + 2] = -4;
       if (posArr[i3 + 2] < -4) posArr[i3 + 2] = 4;
 
-      // Mouse attraction — particles gently pull toward cursor
       const dx = mouseRef.current.x - posArr[i3];
       const dy = mouseRef.current.y - posArr[i3 + 1];
       const dist = Math.sqrt(dx * dx + dy * dy);
@@ -90,7 +89,6 @@ function ParticleNetwork() {
       posArr[i3] += dx * influence * 0.008;
       posArr[i3 + 1] += dy * influence * 0.008;
 
-      // Gradually rotate velocity for natural wandering
       if (Math.random() < 0.01) {
         const rotAngle = (Math.random() - 0.5) * 0.5;
         const vx = velocities[i3];
@@ -100,9 +98,14 @@ function ParticleNetwork() {
       }
     }
 
-    pointsRef.current.geometry.attributes.position.needsUpdate = true;
+    const opArr = pointsRef.current.geometry.attributes.aOpacity.array;
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      opArr[i] = 0.2 + 0.8 * ((Math.sin(time * blinkSpeeds[i] + blinkOffsets[i]) + 1) / 2);
+    }
 
-    // Update connections between nearby particles
+    pointsRef.current.geometry.attributes.position.needsUpdate = true;
+    pointsRef.current.geometry.attributes.aOpacity.needsUpdate = true;
+
     const linePosArr = linesRef.current.geometry.attributes.position.array;
     const lineColArr = linesRef.current.geometry.attributes.color.array;
     let connectionCount = 0;
@@ -172,15 +175,36 @@ function ParticleNetwork() {
             array={sizes}
             itemSize={1}
           />
+          <bufferAttribute
+            attach="attributes-aOpacity"
+            count={PARTICLE_COUNT}
+            array={opacities}
+            itemSize={1}
+          />
         </bufferGeometry>
-        <pointsMaterial
-          size={0.04}
-          color="#CA8B04"
+        <shaderMaterial
           transparent
-          opacity={0.6}
-          sizeAttenuation
           depthWrite={false}
           blending={THREE.AdditiveBlending}
+          vertexShader={`
+            attribute float aOpacity;
+            varying float vOpacity;
+            void main() {
+              vOpacity = aOpacity;
+              vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+              gl_PointSize = 4.0 * (1.0 / -mvPosition.z);
+              gl_Position = projectionMatrix * mvPosition;
+            }
+          `}
+          fragmentShader={`
+            varying float vOpacity;
+            void main() {
+              float d = length(gl_PointCoord - vec2(0.5));
+              if (d > 0.5) discard;
+              float alpha = smoothstep(0.5, 0.1, d) * vOpacity * 0.6;
+              gl_FragColor = vec4(0.79, 0.55, 0.02, alpha);
+            }
+          `}
         />
       </points>
 
@@ -226,8 +250,9 @@ export default function ParticleBackground() {
     >
       <Canvas
         camera={{ position: [0, 0, 5], fov: 75 }}
-        style={{ pointerEvents: "none" }}
+        style={{ pointerEvents: "none", background: "transparent" }}
         gl={{ alpha: true }}
+        onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
       >
         <ParticleNetwork />
       </Canvas>
