@@ -14,6 +14,7 @@ import { feicons } from "../Carousel/feicons";
 // import BlackedManMount from "/blacked man_on_mountain.png";
 
 import BackToTop from "../../inc/BackToTop";
+import ParticleBackground from "./ParticleBackground";
 
 import ResumeBtn from "./resumebtns/ResumeBtn";
 // import SplitBtn from "./resumebtns/SplitBtn";
@@ -39,7 +40,6 @@ function Home({ setActiveLink }) {
     // AOS.refresh();
   }, []);
 
-  // ======================= //
   // const mainRef = useRef(null);
 
   // useEffect(() => {
@@ -51,9 +51,6 @@ function Home({ setActiveLink }) {
   //   );
   // }, [mainRef]);
 
-  // ======================= //
-
-  // ======== Parallax Scrolling ========= //
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -62,13 +59,10 @@ function Home({ setActiveLink }) {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  // ======== Parallax Scrolling END ========= //
 
   const handleReadMoreClick = () => {
-    // Set the active link to 1 (index of "About Me" in the Navbar)
     setActiveLink(1);
 
-    // Manually add the active class to the About Me link
     const aboutLink = document.querySelector(".nav-link[href='/about']");
     if (aboutLink) {
       aboutLink.classList.add("active");
@@ -77,12 +71,11 @@ function Home({ setActiveLink }) {
 
   return (
     <>
-      {/* ========================= FIRST SECTION ========================== */}
-
+      <ParticleBackground />
       <div
         // ref={mainRef}
         id="first-sect"
-        className="xxs:h-[180vh] sm:h-[92vh] xl:h-[95vh] w-screen sm:content-center"
+        className="xxs:h-[180vh] sm:h-[92vh] xl:h-[95vh] w-screen sm:content-center relative z-[1]"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
         <section className="container grid lg:grid-cols-2 relative lg:mx-20 pt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 ">
@@ -163,7 +156,6 @@ function Home({ setActiveLink }) {
         /> */}
       </div>
 
-      {/* ========================= FIRST SECTION END ========================== */}
       <section
         id="extras-sect"
         className=" flex space-x-16 overflow-hidden group"
@@ -184,11 +176,7 @@ function Home({ setActiveLink }) {
 
       <JobExperiences />
 
-      {/* ============================= PROJECT SECTION ============================== */}
       <Projects />
-      {/* ============================= PROJECT SECTION ============================== */}
-
-      {/* ========================= THIRD SECTION ========================== */}
 
       {/* <section
         className=""
@@ -235,12 +223,7 @@ function Home({ setActiveLink }) {
         </section>
       </section> */}
 
-      {/* ========================= THIRD SECTION END ========================== */}
-
-      {/* My VISION, MISSION and VALUES */}
       {/* <VMC /> */}
-
-      {/* My Services */}
 
       {/* <section
         className="section border-top"
