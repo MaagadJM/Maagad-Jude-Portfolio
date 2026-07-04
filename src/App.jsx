@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
-import gsap from "gsap";
+// import gsap from "gsap";
 
 import OverlayOne from "./components/inc/LoaderComponents/OverlayOne";
 import Loader from "./components/inc/LoaderComponents/Loader";
-import LoaderTwo from "./components/inc/LoaderComponents/LoaderTwo";
+// import LoaderTwo from "./components/inc/LoaderComponents/LoaderTwo";
+// import ThreeDScene from "./components/ThreeDScene";
 
 import "./App.css";
 
@@ -45,6 +46,24 @@ function App() {
             <OverlayOne />
             <Navbar />
             <Routes>
+
+
+            {/* <Route 
+              exact 
+              path="/" 
+              element={
+                <>
+                  <div className="App">
+                    <h1>My First 3D Scene</h1>
+                    <ThreeDScene />
+                  </div>
+                  </>
+              }>
+
+            </Route> */}
+
+
+
               <Route exact path="/" element={<Home />}></Route>
               <Route path="/about" element={<Aboutme />}></Route>
               <Route path="/contact" element={<Contactme />}></Route>
