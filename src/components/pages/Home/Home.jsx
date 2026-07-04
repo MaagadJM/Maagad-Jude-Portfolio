@@ -17,6 +17,7 @@ import RHouseMount from "/right house mountain.png";
 import BlackedManMount from "/blacked man_on_mountain.png";
 
 import BackToTop from "../../inc/BackToTop";
+import ParticleBackground from "./ParticleBackground";
 
 import ResumeBtn from "./resumebtns/ResumeBtn";
 // import SplitBtn from "./resumebtns/SplitBtn";
@@ -65,6 +66,7 @@ function Home({ setActiveLink }) {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   // ======== Parallax Scrolling END ========= //
 
   const handleReadMoreClick = () => {
@@ -80,12 +82,13 @@ function Home({ setActiveLink }) {
 
   return (
     <>
+      <ParticleBackground />
       {/* ========================= FIRST SECTION ========================== */}
 
       <div
         // ref={mainRef}
         id="first-sect"
-        className="xxs:h-[180vh] sm:h-[92vh] xl:h-[95vh] w-screen sm:content-center"
+        className="xxs:h-[180vh] sm:h-[92vh] xl:h-[95vh] w-screen sm:content-center relative z-[1]"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
         <section className="container grid lg:grid-cols-2 relative lg:mx-20 pt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 ">
