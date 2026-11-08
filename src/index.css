@@ -132,6 +132,57 @@ body,
   background: transparent;
 }
 
+/* ----------- NAVBAR LOGO SHIMMER ---------- */
+/* A band of light sweeps across the logo on a loop, starting after the
+   navbar fades in. The overlay is masked by the logo PNG itself
+   (--logo-url, set in Navbar.jsx) so the light only lands on the logo. */
+.logo-shimmer {
+  position: relative;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(255, 245, 234, 0.95) 50%,
+    transparent 60%
+  );
+  background-size: 250% 100%;
+  background-position: 150% 0; /* band parked off the left edge */
+  -webkit-mask: var(--logo-url) center / contain no-repeat;
+  mask: var(--logo-url) center / contain no-repeat;
+  /* wait for the navbar's AOS fade-down (0.8s delay + 1.5s) */
+  animation: logo-shimmer 2s ease-in-out 2.4s infinite;
+}
+
+.logo-shimmer:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 6px rgba(231, 164, 38, 0.8));
+}
+
+@keyframes logo-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-shimmer,
+  .logo-shimmer::after {
+    animation: none;
+    transition: none;
+  }
+}
+/* ====================================== */
+
 /* Add your custom styles and animations here */
 .swiper-slide {
   transition: opacity 0.5s ease;

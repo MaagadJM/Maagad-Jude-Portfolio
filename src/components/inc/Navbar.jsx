@@ -74,7 +74,11 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex-shrink-0 items-center">
-                    <Link to="/" className="flex-shrink-0 flex items-center">
+                    <Link
+                      to="/"
+                      className="logo-shimmer flex-shrink-0 flex items-center"
+                      style={{ "--logo-url": `url("${JMMLogo}")` }}
+                    >
                       <img
                         className="h-8 w-auto"
                         src={JMMLogo}
