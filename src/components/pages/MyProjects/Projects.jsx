@@ -30,7 +30,6 @@ import ThreeDScene from "../../ThreeDScene"
 // import HSILogoPic from "/Thumbnails/HSI Logo TN.png";
 // import HSILogoVid from "/MP4/HSI Logo.mkv";
 
-import BackToTopButton from "../../inc/BackToTop";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -891,7 +890,6 @@ function Projects() {
 
       {/* ========================= SECOND SECTION END ========================== */}
 
-      <BackToTopButton />
     </>
   );
 }

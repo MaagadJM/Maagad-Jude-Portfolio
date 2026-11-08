@@ -20,7 +20,6 @@ import SAPAdvanceTN from "/Thumbnails/SAP Advance Thumbnail.png";
 import HUAWEInetworkfoundation from "/Thumbnails/HUAWEI Network Foundations TN.png";
 import TikTalksCert from "/Thumbnails/TIK TALKS USAID TN.png";
 
-import BackToTopButton from "../../inc/BackToTop";
 
 function Aboutme() {
   useEffect(() => {
@@ -523,7 +522,6 @@ function Aboutme() {
         </div>
       </div>
 
-      <BackToTopButton />
 
       {/* My VISION, MISSION and VALUES */}
       {/* <VMC /> */}

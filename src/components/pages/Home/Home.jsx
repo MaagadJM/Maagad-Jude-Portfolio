@@ -14,7 +14,6 @@ import { feicons } from "../Carousel/feicons";
 // import RHouseMount from "/right house mountain.png";
 // import BlackedManMount from "/blacked man_on_mountain.png";
 
-import BackToTop from "../../inc/BackToTop";
 import ParticleBackground from "./ParticleBackground";
 
 import ResumeBtn from "./resumebtns/ResumeBtn";
@@ -193,7 +192,7 @@ function Home({ setActiveLink }) {
                 Software Engineer
               </span>
             </p>
-            <div className="underline mt-5 mx-[auto] lg:mx-0 !w-24"></div>
+            <div className="underline mt-5 mx-[auto] lg:mx-0 !w-40 rounded-l-[100%]"></div>
             <p
               data-aos="fade-left"
               data-aos-delay="500"
@@ -379,7 +378,6 @@ function Home({ setActiveLink }) {
         </div>
       </section> */}
 
-      <BackToTop />
     </>
   );
 }

@@ -17,6 +17,7 @@ import Navbar from "./components/inc/Navbar";
 import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/inc/Footer";
 import ScrollToTop from "./components/inc/ScrollToTop";
+import BackToTopButton from "./components/inc/BackToTop";
 
 import ImageLoader from "/JMM Logo Custom Icon.png";
 
@@ -73,6 +74,7 @@ function App() {
               <Route path="/jobs" element={<Jobs />}></Route>
             </Routes>
             <Footer />
+            <BackToTopButton />
           </section>
         )}
       </section>
