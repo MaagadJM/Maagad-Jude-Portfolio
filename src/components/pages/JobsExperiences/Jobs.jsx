@@ -22,7 +22,7 @@ function Projects() {
             //   easing: "ease-in-out", // Easing function for the animation
             //   once: false,
             // }
-            ();
+            ({ offset: 50, once: false, mirror: true });
         // AOS.refresh();
     }, []);
 
@@ -34,7 +34,7 @@ function Projects() {
             <section id="second-sect" className="section">
                 <div className="py-5">
                     <div
-                        className="mx-[15%] mb-5"
+                        className="mx-[5%] md:mx-[15%] mb-5"
                         data-aos="fade-up"
                         data-aos-delay="500"
                         data-aos-duration="1000"
@@ -47,7 +47,7 @@ function Projects() {
                             Resolved critical bugs in legacy modules, reducing user support tickets by 35% and improving system reliability.
                         </p>
                     </div>
-                    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 mx-[15%]">
+                    <div className="grid grid-cols-2 gap-3 md:gap-5 mx-[5%] md:mx-[15%]">
                         <div
                             className=" custom-border px-1"
                             data-aos="fade-right"
@@ -60,7 +60,7 @@ function Projects() {
                                 data-aos-delay="700"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine"
-                                style={{ padding: "15px" }}
+                                className="p-1 md:p-[15px]"
 
                             >
                                 <a
@@ -69,13 +69,13 @@ function Projects() {
                                     rel="noopener noreferrer"
                                     onContextMenu={(e) => e.preventDefault()}
                                     draggable="false"
-                                    className="a-image-shadow rounded-[1%]"
-                                    style={{ position: "relative", display: "block", padding: "15px" }}
+                                    className="a-image-shadow rounded-[1%] p-2 md:p-[15px]"
+                                    style={{ position: "relative", display: "block" }}
                                 >
                                     <img
                                         src={ShopNBidTN}
                                         alt="Certificate Thumbnail"
-                                        className="rounded-[1%] w-full md:h-80 lg:h-[80%] spin-hover"
+                                        className="rounded-[1%] w-full h-auto spin-hover"
                                         style={{
                                             pointerEvents: "none",
                                             display: "block",
@@ -95,14 +95,14 @@ function Projects() {
                                         rel="noopener noreferrer"
                                         onContextMenu={(e) => e.preventDefault()}
                                         draggable="false"
-                                        className="a-image-shadow rounded-[1%] no-underline text-inherit"
-                                        style={{ position: "relative", display: "inline-block", padding: "15px" }}
+                                        className="a-image-shadow rounded-[1%] no-underline text-inherit p-2 md:p-[15px]"
+                                        style={{ position: "relative", display: "inline-block" }}
                                     >
-                                        <p className="text-[#FFF5EA] text-3xl font-light">
+                                        <p className="text-[#FFF5EA] text-lg md:text-3xl font-light">
                                             Shop N' Bid <br /> E-commerce system
                                         </p>
                                         <div className="underline"></div>
-                                        <p className="text-[#FFF5EA] mt-2">
+                                        <p className="text-[#FFF5EA] text-sm md:text-base mt-2">
                                             Revised the old design version of the Shop N' Bid E-commerce system to enhance user experience and accessibility.
                                         </p>
 
@@ -126,7 +126,7 @@ function Projects() {
                                 data-aos-delay="700"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine"
-                                style={{ padding: "15px" }}
+                                className="p-1 md:p-[15px]"
 
                             >
                                 <a
@@ -135,13 +135,13 @@ function Projects() {
                                     rel="noopener noreferrer"
                                     onContextMenu={(e) => e.preventDefault()}
                                     draggable="false"
-                                    className="a-image-shadow rounded-[1%]"
-                                    style={{ position: "relative", display: "block", padding: "15px" }}
+                                    className="a-image-shadow rounded-[1%] p-2 md:p-[15px]"
+                                    style={{ position: "relative", display: "block" }}
                                 >
                                     <img
                                         src={ExtrimV3TN}
                                         alt="Certificate Thumbnail"
-                                        className="rounded-[1%] w-full md:h-80 lg:h-[80%] spin-hover"
+                                        className="rounded-[1%] w-full h-auto spin-hover"
                                         style={{
                                             pointerEvents: "none",
                                             display: "block",
@@ -152,11 +152,11 @@ function Projects() {
                                 </a>
 
                                 <section className="mx-0 mt-[20px]">
-                                    <p className="text-[#FFF5EA] text-3xl font-light">
+                                    <p className="text-[#FFF5EA] text-lg md:text-3xl font-light">
                                         Extrim V3 <br /> EXTended Retail Inventory Management
                                     </p>
                                     <div className="underline"></div>
-                                    <p className="text-[#FFF5EA] mt-2">
+                                    <p className="text-[#FFF5EA] text-sm md:text-base mt-2">
                                         Troubleshooting and debugging issues in the Extrim V3 system, ensuring smooth operation and user satisfaction.
                                         Supporting payment issues with Paymongo
                                     </p>
