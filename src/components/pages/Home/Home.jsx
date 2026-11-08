@@ -54,11 +54,27 @@ function Home({ setActiveLink }) {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
+  // Full parallax on desktop (lg+). On the stacked mobile layout, use a
+  // gentler, capped shift so the hero text never drifts over the sections below.
+  const [isDesktop, setIsDesktop] = useState(
+    () => window.matchMedia("(min-width: 1024px)").matches
+  );
+
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 1024px)");
+    const handleChange = (e) => setIsDesktop(e.matches);
+    mql.addEventListener("change", handleChange);
+
+    return () => mql.removeEventListener("change", handleChange);
+  }, []);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const parallaxY = isDesktop ? offsetY * 0.3 : Math.min(offsetY * 0.1, 40);
 
   const handleReadMoreClick = () => {
     setActiveLink(1);
@@ -75,7 +91,7 @@ function Home({ setActiveLink }) {
       <div
         // ref={mainRef}
         id="first-sect"
-        className="xxs:h-[180vh] sm:h-[92vh] xl:h-[95vh] w-screen sm:content-center relative z-[1]"
+        className="min-h-screen pb-16 lg:pb-0 lg:min-h-[92vh] xl:min-h-[95vh] w-screen lg:content-center relative z-[1]"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
         <section className="container grid lg:grid-cols-2 relative lg:mx-20 pt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 ">
@@ -90,20 +106,20 @@ function Home({ setActiveLink }) {
               src={MeCropped}
               alt=""
               className=" rounded-[2%] xxs:h-48 md:h-80 lg:h-96 f-image-shadow spin-hover"
-              style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+              style={{ transform: `translateY(-${parallaxY}px)` }}
             />
           </section>
 
           <section
             className="xxs:text-center lg:text-start place-content-center "
-            style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+            style={{ transform: `translateY(${parallaxY}px)` }}
           >
             <p
               data-aos="fade-left"
               data-aos-delay="1000"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
-              className="text-[#FFF5EA] text-4xl font-light"
+              className="text-[#FFF5EA] text-3xl md:text-4xl font-light"
             >
               Jude Michael Maagad
             </p>
@@ -113,9 +129,9 @@ function Home({ setActiveLink }) {
               data-aos-delay="1500"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
-              className="text-4xl font-light"
+              className="text-2xl md:text-3xl lg:text-4xl font-light"
             >
-              Software Developer / Engineer <br />  <br /> UI | UX Designer.
+              Full-Stack Web & Mobile App Developer <br />  <br /> Software Engineer.
             </p>
             <br />
             <p
@@ -123,7 +139,7 @@ function Home({ setActiveLink }) {
               data-aos-delay="2000"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
-              className="text-2xl font-light"
+              className="text-base md:text-xl lg:text-2xl font-light"
             >
               To obtain a position with a company where I can grow my skills 
               <br /> <br />
@@ -158,7 +174,7 @@ function Home({ setActiveLink }) {
 
       <section
         id="extras-sect"
-        className=" flex space-x-16 overflow-hidden group"
+        className=" flex space-x-16 overflow-hidden group mt-24 lg:mt-0"
       >
         <section className=" flex animate-loop-scroll space-x-16 items-center group-hover:paused">
           {feicons.map((feicon) => (
