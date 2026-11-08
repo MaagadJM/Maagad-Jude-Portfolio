@@ -33,7 +33,7 @@ function Aboutme() {
       //   easing: "ease-in-out", // Easing function for the animation
       //   once: false,
       // }
-      ();
+      ({ offset: 50, once: false, mirror: true });
     // AOS.refresh();
   }, []);
 
