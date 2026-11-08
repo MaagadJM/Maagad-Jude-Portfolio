@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import HSIEngage from "/Thumbnails/HSI thumbnail.png";
 import AllinOneApp from "/Thumbnails/All in One App TN.png";
+import Envirocycle from "/Thumbnails/envirocycle-main-page.png";
 import TFSI from "/Thumbnails/Techforce Solutions Inc.png";
 import HaiAPPDB from "/Thumbnails/HAI APP Dashboard.png";
 import GatsbyOne from "/Thumbnails/Gatsby One TN.png";
@@ -107,32 +108,28 @@ function Projects() {
             >
               <section>
                 <a
-                  href="https://maagadjm.github.io/Maagad-HSI-Engage/"
+                  href="https://envirocycle-inc.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
                   <img
-                    src={HSIEngage}
+                    src={Envirocycle}
                     className="w-full h-[70%] rounded-t-md cursor-pointer"
-                    alt="HSI Engage"
+                    alt="Envirocycle Inc."
                   />
                 </a>
                 <section className="mx-4 mt-[20px]">
                   <p className="text-[#FFF5EA] text-3xl font-light">
-                    HSI Engage
+                    Envirocycle Inc.
                   </p>
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
-                    Developed an Engage web page for Highly Succeed Inc. under
-                    Marketing Department as their Front End Web Developer
-                    Intern.
+                    Corporate website for Envirocycle Inc., an R2-certified
+                    asset recovery and recycling company. Features a modern
+                    dark/light theme, site search, and service showcases for
+                    asset disposal, hazardous waste, and ITAD solutions.
                   </p>
-                  {/* <Link to="/" className="btn btn-link">
-                  read more
-                </Link> */}
                 </section>
-                {/* </a> */}
               </section>
             </div>
             {/* ----------------------------------------- */}
@@ -165,6 +162,45 @@ function Projects() {
                   <div className="underline"></div>
                   <p className="text-[#FFF5EA] mt-2">
                     A full-stack React + Django app with JWT auth, guest access, dark mode, and two modules — a Task Manager and an OIG Exclusion Screener that queries the federal LEIE database. Features daily rate limiting and a real-time server health monitor.
+                  </p>
+                  {/* <Link to="/" className="btn btn-link">
+                  read more
+                </Link> */}
+                </section>
+                {/* </a> */}
+              </section>
+            </div>
+
+            {/* ----------------------------------------- */}
+
+            <div
+              className=" custom-border px-1"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            >
+              <section>
+                <a
+                  href="https://maagadjm.github.io/Maagad-HSI-Engage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* <div className="col-md-4 rounded-3xl border border-yellow-500"> */}
+                  <img
+                    src={HSIEngage}
+                    className="w-full h-[70%] rounded-t-md cursor-pointer"
+                    alt="HSI Engage"
+                  />
+                </a>
+                <section className="mx-4 mt-[20px]">
+                  <p className="text-[#FFF5EA] text-3xl font-light">
+                    HSI Engage
+                  </p>
+                  <div className="underline"></div>
+                  <p className="text-[#FFF5EA] mt-2">
+                    Developed an Engage web page for Highly Succeed Inc. under
+                    Marketing Department as their Front End Web Developer
+                    Intern.
                   </p>
                   {/* <Link to="/" className="btn btn-link">
                   read more
