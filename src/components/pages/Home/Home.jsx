@@ -144,7 +144,7 @@ function Home({ setActiveLink }) {
         // ref={mainRef}
         ref={heroRef}
         id="first-sect"
-        className="min-h-screen pb-16 lg:pb-0 lg:min-h-[92vh] xl:min-h-[95vh] w-screen lg:content-center relative z-[1]"
+        className="-mt-20 pt-20 min-h-screen pb-16 lg:pb-0 lg:min-h-[92vh] xl:min-h-[95vh] w-screen lg:content-center relative z-[1]"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
         <section className="container grid lg:grid-cols-2 relative lg:mx-20 pt-16 gap-x-12 gap-y-10 lg:gap-y-0">
@@ -184,11 +184,11 @@ function Home({ setActiveLink }) {
               data-aos-easing="ease-out"
               className="text-[#ca8b04] text-base md:text-2xl mt-3"
             >
-              <span className="block md:inline lg:block whitespace-nowrap">
+              <span className="block md:inline lg:block md:whitespace-nowrap">
                 Full-Stack Web & Mobile App Developer
               </span>
               <span className="hidden md:inline lg:hidden"> · </span>
-              <span className="block md:inline lg:block whitespace-nowrap">
+              <span className="block md:inline lg:block md:whitespace-nowrap">
                 Software Engineer
               </span>
             </p>

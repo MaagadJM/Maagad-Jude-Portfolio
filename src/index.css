@@ -128,7 +128,8 @@ body,
 /* ====================================== */
 
 .navbar-bgc {
-  background: -webkit-linear-gradient(90deg, #18181b, #ca8b04, #18181b);
+  /* background: -webkit-linear-gradient(90deg, #18181b, #ca8b04, #18181b); */
+  background: transparent;
 }
 
 /* Add your custom styles and animations here */
