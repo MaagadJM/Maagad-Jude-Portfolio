@@ -128,7 +128,8 @@ body,
 /* ====================================== */
 
 .navbar-bgc {
-  background: -webkit-linear-gradient(90deg, #18181b, #ca8b04, #18181b);
+  /* background: -webkit-linear-gradient(90deg, #18181b, #ca8b04, #18181b); */
+  background: transparent;
 }
 
 /* Add your custom styles and animations here */
@@ -149,11 +150,13 @@ body,
 /* =================== FIRST SECTION ================= */
 
 #first-sect {
-  background: -webkit-linear-gradient(90deg, #18181b, #ca8b04, #18181b);
+  /* background: -webkit-linear-gradient(90deg, #18181b, #ca8b04, #18181b); */
   /* background: conic-gradient(from 0deg at 0% 0%, #18181B 25%, #475e8a 90%, #3b4c5c); */
   /* background: radial-gradient(circle, #ca8b046c, #ca8b04bb, #ca8b0400, #1d1f2005, #1d1f2000 ); */
-  background-color: #ca8b04;
-  background-size: 100vw;
+  /* background-color: #ca8b04; */
+  /* background-size: 100vw; */
+  background: radial-gradient(ellipse at top, #ca8b0433 0%, #18181b 65%);
+  background-color: #18181b;
 }
 
 /* =========== IMAGE SHADOW HOVER ============ */
@@ -177,33 +180,23 @@ body,
 } */
 
 .resume-download {
-  color: #fff5ea;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
-  background: -webkit-linear-gradient(
-    0deg,
-    #18181b50 1%,
-    #ca8b04 5%,
-    #18181b 90%,
-    #18181b02
-  );
-  padding: 10px 10%;
-  /* transition: background 3s ease-in-out, color 3s ease-in-out; */
-  transition-property: color, background, box-shadow;
-  transition-duration: 1s, 3s, 0.5s;
-  transition-timing-function: ease-out, linear, ease-in;
+  color: #18181b;
+  font-weight: 600;
+  background-color: #ca8b04;
+  border: 1px solid #ca8b04;
+  border-radius: 4px;
+  padding: 10px 24px;
+  line-height: 1.5rem;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
 
 .resume-download:hover {
-  color: #000000;
-  box-shadow: 0 1px 4px rgba(255, 224, 87, 0.8) !important;
-  background: -webkit-linear-gradient(
-    0deg,
-    #18181b50 1%,
-    #ca8b04 5%,
-    #18181b 90%,
-    #18181b02
-  );
-  padding: 10px 10%;
+  background-color: #e0a10f;
+  box-shadow: 0 1px 8px rgba(255, 224, 87, 0.6);
 }
 /* =================== FIRST SECTION END ================= */
 

@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import gsap from "gsap";
 
 import JobExperiences from "../JobsExperiences/Jobs";
@@ -13,11 +14,14 @@ import { feicons } from "../Carousel/feicons";
 // import RHouseMount from "/right house mountain.png";
 // import BlackedManMount from "/blacked man_on_mountain.png";
 
-import BackToTop from "../../inc/BackToTop";
 import ParticleBackground from "./ParticleBackground";
 
 import ResumeBtn from "./resumebtns/ResumeBtn";
 // import SplitBtn from "./resumebtns/SplitBtn";
+
+// Module-level so the revealed hero buttons survive navigating away and back
+// to Home; it only resets on a full page reload.
+let heroButtonsRevealed = false;
 
 function Home({ setActiveLink }) {
   // const [activeLink, setActiveLink] = useState(null);
@@ -74,7 +78,55 @@ function Home({ setActiveLink }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const parallaxY = isDesktop ? offsetY * 0.3 : Math.min(offsetY * 0.1, 40);
+  // Never let the parallax push the hero text past the top of the next
+  // section. offsetTop/offsetHeight ignore transforms, so this measures the
+  // text's untranslated position.
+  const heroRef = useRef(null);
+  const heroTextRef = useRef(null);
+  const [maxParallax, setMaxParallax] = useState(Infinity);
+
+  useEffect(() => {
+    const measure = () => {
+      const hero = heroRef.current;
+      const text = heroTextRef.current;
+      const next = hero?.nextElementSibling;
+      if (!hero || !text || !next) return;
+
+      const textBottom =
+        text.offsetParent.offsetTop + text.offsetTop + text.offsetHeight;
+      const nextTop =
+        next.getBoundingClientRect().top - hero.getBoundingClientRect().top;
+      setMaxParallax(Math.max(0, nextTop - textBottom - 16));
+    };
+
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(heroRef.current);
+    window.addEventListener("resize", measure);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+
+  const parallaxY = Math.min(
+    isDesktop ? offsetY * 0.3 : Math.min(offsetY * 0.1, 40),
+    maxParallax
+  );
+
+  // Reveal the hero buttons once the user has scrolled 3000px. After that
+  // they stay visible until the page is reloaded.
+  const [showHeroButtons, setShowHeroButtons] = useState(
+    () => heroButtonsRevealed
+  );
+
+  useEffect(() => {
+    if (!showHeroButtons && offsetY > 3000) {
+      heroButtonsRevealed = true;
+      setShowHeroButtons(true);
+    }
+  }, [offsetY, showHeroButtons]);
 
   const handleReadMoreClick = () => {
     setActiveLink(1);
@@ -90,11 +142,12 @@ function Home({ setActiveLink }) {
       <ParticleBackground />
       <div
         // ref={mainRef}
+        ref={heroRef}
         id="first-sect"
-        className="min-h-screen pb-16 lg:pb-0 lg:min-h-[92vh] xl:min-h-[95vh] w-screen lg:content-center relative z-[1]"
+        className="-mt-20 pt-20 min-h-screen pb-16 lg:pb-0 lg:min-h-[92vh] xl:min-h-[95vh] w-screen lg:content-center relative z-[1]"
         // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
-        <section className="container grid lg:grid-cols-2 relative lg:mx-20 pt-16 gap-x-12 xxs:gap-y-10 sm:gap-y-0 ">
+        <section className="container grid lg:grid-cols-2 relative lg:mx-20 pt-16 gap-x-12 gap-y-10 lg:gap-y-0">
           <section
             data-aos="fade-up"
             data-aos-delay="500"
@@ -111,48 +164,60 @@ function Home({ setActiveLink }) {
           </section>
 
           <section
-            className="xxs:text-center lg:text-start place-content-center "
+            ref={heroTextRef}
+            className="xxs:text-center lg:text-start place-content-center px-6 lg:px-0"
             style={{ transform: `translateY(${parallaxY}px)` }}
           >
-            <p
+            <h1
               data-aos="fade-left"
-              data-aos-delay="1000"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-sine"
-              className="text-[#FFF5EA] text-3xl md:text-4xl font-light"
+              data-aos-delay="200"
+              data-aos-duration="800"
+              data-aos-easing="ease-out"
+              className="text-[#FFF5EA] text-4xl md:text-5xl font-semibold tracking-tight"
             >
               Jude Michael Maagad
-            </p>
-            <br />
+            </h1>
             <p
               data-aos="fade-left"
-              data-aos-delay="1500"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-sine"
-              className="text-2xl md:text-3xl lg:text-4xl font-light"
+              data-aos-delay="350"
+              data-aos-duration="800"
+              data-aos-easing="ease-out"
+              className="text-[#ca8b04] text-base md:text-2xl mt-3"
             >
-              Full-Stack Web & Mobile App Developer <br />  <br /> Software Engineer.
+              <span className="block md:inline lg:block md:whitespace-nowrap">
+                Full-Stack Web & Mobile App Developer
+              </span>
+              <span className="hidden md:inline lg:hidden"> · </span>
+              <span className="block md:inline lg:block md:whitespace-nowrap">
+                Software Engineer
+              </span>
             </p>
-            <br />
+            <div className="underline mt-5 mx-[auto] lg:mx-0 !w-40 rounded-l-[100%]"></div>
             <p
               data-aos="fade-left"
-              data-aos-delay="2000"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-sine"
-              className="text-base md:text-xl lg:text-2xl font-light"
+              data-aos-delay="500"
+              data-aos-duration="800"
+              data-aos-easing="ease-out"
+              className="text-[#FFF5EA]/80 text-base md:text-lg leading-relaxed mt-5 max-w-xl mx-[auto] lg:mx-0"
             >
-              To obtain a position with a company where I can grow my skills 
-              <br /> <br />
-              I design and develop high-end web experiences for design-driven companies that value attention to detail.
+              I build web and mobile products end to end, from Laravel and
+              Node APIs to React and Vue frontends, and ship them to
+              production.
             </p>
-            <br />
             <div
-              data-aos="fade-left"
-              data-aos-delay="2400"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-sine"
+              className={`flex flex-wrap gap-4 mt-8 justify-center lg:justify-start transition-all duration-500 ease-out ${
+                showHeroButtons
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4 invisible"
+              }`}
             >
               <ResumeBtn />
+              <Link
+                to="/contact"
+                className="px-6 py-[10px] leading-6 whitespace-nowrap rounded-[4px] [border:1px_solid_#ca8b04] text-[#FFF5EA] no-underline hover:bg-[#ca8b04] hover:text-[#18181b] transition-colors duration-300"
+              >
+                Contact Me
+              </Link>
             </div>
           </section>
         </section>
@@ -313,7 +378,6 @@ function Home({ setActiveLink }) {
         </div>
       </section> */}
 
-      <BackToTop />
     </>
   );
 }

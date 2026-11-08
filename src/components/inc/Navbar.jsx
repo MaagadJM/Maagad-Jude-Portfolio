@@ -38,10 +38,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <main className="navbar-bgc">
+    <main className="navbar-bgc relative z-[5]">
       <Disclosure
         as="nav"
-        className="bg-zinc-900 pt-3"
+        className="relative bg-transparent pt-3"
         data-aos="fade-down"
         data-aos-delay="500"
         data-aos-duration="1500"
@@ -56,7 +56,7 @@ export default function Navbar() {
             >
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#ca8b04]">
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -173,10 +173,13 @@ export default function Navbar() {
               </div>
             </div>
 
-            <DisclosurePanel className="sm:hidden">
+            {/* Floating frosted-glass menu (iOS style): 30% tint + blur */}
+            <DisclosurePanel className="sm:hidden absolute left-0 right-0 top-full mx-3 mt-2 rounded-2xl bg-zinc-900/30 backdrop-blur-xl backdrop-saturate-150 [border:1px_solid_rgba(255,255,255,0.08)] shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
               <div className="space-y-1 px-2 pb-3 pt-2">
                 {navigation.map((item) => (
-                  <Link
+                  // DisclosureButton as Link so tapping a link also closes the menu
+                  <DisclosureButton
+                    as={Link}
                     key={item.name}
                     to={item.href}
                     className={classNames(
@@ -188,7 +191,7 @@ export default function Navbar() {
                     aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
-                  </Link>
+                  </DisclosureButton>
                 ))}
               </div>
             </DisclosurePanel>

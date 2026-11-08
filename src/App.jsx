@@ -16,6 +16,8 @@ import Projects from "./components/pages/MyProjects/Projects";
 import Navbar from "./components/inc/Navbar";
 import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/inc/Footer";
+import ScrollToTop from "./components/inc/ScrollToTop";
+import BackToTopButton from "./components/inc/BackToTop";
 
 import ImageLoader from "/JMM Logo Custom Icon.png";
 
@@ -44,6 +46,7 @@ function App() {
           // id="gsap-overlay" className="bg-[#CA0503] w-screen h-screen"
           >
             <OverlayOne />
+            <ScrollToTop />
             <Navbar />
             <Routes>
 
@@ -71,6 +74,7 @@ function App() {
               <Route path="/jobs" element={<Jobs />}></Route>
             </Routes>
             <Footer />
+            <BackToTopButton />
           </section>
         )}
       </section>
