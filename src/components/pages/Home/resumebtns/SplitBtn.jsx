@@ -26,7 +26,7 @@ const SplitBtn = ({ pdfUrl }) => {
         className="resume-download"
         onClick={() => window.open(pdfUrl, "_blank", "noopener,noreferrer")}
       >
-        Come back here to see my Resume!
+        View Resume
       </button>
     </div>
   );
